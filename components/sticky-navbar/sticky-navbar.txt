@@ -32,7 +32,9 @@ LICENSING INFORMATION
 This is the Wikidot syntax code behind the actual component.
 --]
 
-
+[[module css]]
+@import url("https://github.com/JaonHax/wikidot-components/blob/master/components/sticky-navbar/sticky-navbar.css?raw=true");
+[[/module]]
 
 [[div class="w3-container w3-hide-small w3-hide-medium w3-bar-block w3-theme-d1 w3-round" id="navbar-desktop" style="position:fixed;bottom:0;right:0;z-index:9999!important;"]]
 [[toc]]
