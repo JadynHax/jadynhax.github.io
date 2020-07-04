@@ -15,11 +15,12 @@ I'm JaonHax and I'll be your guide in this wonderous realm!
     "end_time":40,
     "disp_time":2000,
     "loop":true,
-    "obfu_chars":{$obfu-chars},
-    "phrases":{$phrases}
+    "obfu_chars":"0123456789█!<>-_\\/[]{}—=+*^?#",
+    "phrases":[
+    ]
   }
 </script>
 <script type="text/javascript" src="http://scp-sandbox-3.wikidot.com/local--files/jaonhax/obfuscator.js"></script>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NDI1MTI2Myw4NzA2MTA5MjNdfQ==
+eyJoaXN0b3J5IjpbLTE4ODM4MTIzNiw4NzA2MTA5MjNdfQ==
 -->
