@@ -3,9 +3,7 @@ I'm JaonHax and I'll be your guide in this wonderous realm!
 
 <body>
   <p>
-    {$text-before}
     <span class="text" style="display: inline">{$default-text}</span>
-    {$text-after}
   </p>
 </body>
 <script type="text/javascript">
@@ -24,5 +22,5 @@ I'm JaonHax and I'll be your guide in this wonderous realm!
 </script>
 <script type="text/javascript" src="http://scp-sandbox-3.wikidot.com/local--files/jaonhax/obfuscator.js"></script>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NDgzNDk0Miw4NzA2MTA5MjNdfQ==
+eyJoaXN0b3J5IjpbMTc2MzExMTE2Nyw4NzA2MTA5MjNdfQ==
 -->
