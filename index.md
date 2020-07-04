@@ -61,31 +61,25 @@ randomChar() {
 return this.chars[Math.floor(Math.random() * this.chars.length)]  
 }  
 }
-
 const phrases = [ // You can probably guess that this is the phrases variable.  
 'Obfuscator phrase 1.',  
 'Obfuscator phrase 2.',  
 'Obfuscator phrase 3.'  
 ]
-
 const el = document.querySelector('.text')  
 const fx = new TextScramble(el)
-
 let counter = 0
-
 const next = () => {  
 fx.setText(phrases[counter]).then(() => {  
 setTimeout(next, 2000) // This is where the disp_time variable is normally used.  
 })
-
 // The loop variable is not programmed into this version. This version automatically loops.  
 // If you want it to NOT loop, edit this next line so it does not include the "% phrases.length".  
 // This will cause it to not loop your phrases.  
 counter = (counter + 1) % phrases.length  
 }
-
 setTimeout(next, 0) // This is where the delay variable is normally used.  
 </script>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODU3NjkxOCw4NzA2MTA5MjNdfQ==
+eyJoaXN0b3J5IjpbMTc5MDg3OTkzMCw4NzA2MTA5MjNdfQ==
 -->
