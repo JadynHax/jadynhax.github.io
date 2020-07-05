@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="https://jaonhax.github.io/theme.css">
 		<script src="https://kit.fontawesome.com/d2300f412a.js" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 	</head>
 	
 	<body>
@@ -17,8 +18,18 @@
 			});
 		</script>
 		<header class="w3-container w3-theme w3-center">
-			<h1>Hey there!</h1>
+			<h1 class="header-typed"></h1>
 		</header>
+		<script>
+			import Typed from 'typed.js';
+			
+			var options = {
+				strings: ['Hey there! ^1000 \n&amp; welcome to my website.'],
+				typeSpeed: 40
+			};
+			
+			var typed = new Typed('.header-typed', options);
+		</script>
 		<section class="w3-container">
 			<p>
 				Nice of you to stop by! I don't get many visitors here.
