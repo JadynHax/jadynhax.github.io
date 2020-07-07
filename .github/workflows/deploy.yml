@@ -1,7 +1,11 @@
 name: Build and Deploy
-on: [push]
+on:
+  push:
+    branches: gh-pages
+
+
 jobs:
-  build-and-deploy:
+  deploy-pages:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -13,5 +17,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: master # The branch the action should deploy to.
+          BRANCH: gh-pages-release # The branch the action should deploy to.
           FOLDER: . # The folder the action should deploy.
