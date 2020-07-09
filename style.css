@@ -85,7 +85,7 @@ h3 {
 	text-decoration:none;
 	font-weight:bold;
 	background-color:transparent;
-	transition:background 0.5s,color 0.5s,padding 0.5s;
+	transition:background 0.25s,color 0.25s,padding 0.25s;
 }
 
 #navbar a:hover {
