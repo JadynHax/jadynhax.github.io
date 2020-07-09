@@ -1,0 +1,42 @@
+/*
+Accent block background: #240090
+Bright accent block background: #3500d3
+Medium dark accent block background: #190061
+Dark accent block background: #0c0032
+
+Other potential colors
+#5f2fed
+#4310de
+#3713a1
+#2a03a8
+#470aff
+*/
+
+.page-content {
+	font-family: 'Exo 2', 'Oxanium', sans-serif;
+}
+
+/* Theme color palette stuff */
+.accent {
+	background-color: #240090;
+	color:#fff;
+}
+.bright-accent {
+	background-color: #3500d3;
+	color:#fff;
+}
+.mid-dark-accent {
+	background-color: #190061;
+	color:#fff;
+}
+.dark-accent {
+	background-color: #0c0032;
+	color: #fff;
+}
+
+/* Other styling */
+h1,
+h2,
+h3 {
+	font-family: 'Oxanium', sans-serif;
+}
