@@ -43,4 +43,6 @@ h3 {
 
 .page-head h1 {
 	font-family: 'Elianto', 'Oxanium', sans-serif;
+	font-size: 200%;
+	font-weight:normal;
 }
