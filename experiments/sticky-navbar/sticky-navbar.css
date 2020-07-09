@@ -1,0 +1,676 @@
+/* 
+LICENSING INFORMATION
+	
+=======================================================================================================================================
+	
+	This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License.
+	To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+	
+=======================================================================================================================================
+	
+	Sticky Navbar styling code.
+	Copyright (C) 2020 Jason Rutz
+	
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+	
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+	
+	You can contact me via email at jaonhax@gmail.com, via Wikidot PM
+	(to JaonHax), or on the SCP Foundation IRC chatrooms (JaonHax).
+*/
+
+
+
+/*
+	Section copied from W3.CSS with minor edits. Not importing the entire
+	stylesheet because it messes up some of Wikidot's styling that's
+	already in place.
+	
+	W3.CSS can be found at <https://www.w3schools.com/w3css/default.asp>.
+*/
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%
+}
+
+body {
+	margin: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+	display: block
+}
+
+summary {
+	display: list-item
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block
+}
+
+progress {
+	vertical-align: baseline
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0
+}
+
+[hidden],
+template {
+	display: none
+}
+
+a {
+	background-color: transparent
+}
+
+a:active,
+a:hover {
+	outline-width: 0
+}
+
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted
+}
+
+b,
+strong {
+	font-weight: bolder
+}
+
+dfn {
+	font-style: italic
+}
+
+mark {
+	background: #ff0;
+	color: #000
+}
+
+small {
+	font-size: 80%
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline
+}
+
+sub {
+	bottom: -.25em
+}
+
+sup {
+	top: -.5em
+}
+
+figure {
+	margin: 1em 40px
+}
+
+img {
+	border-style: none
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font: inherit;
+	margin: 0
+}
+
+optgroup {
+	font-weight: 700
+}
+
+button,
+input {
+	overflow: visible
+}
+
+button,
+select {
+	text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+	-webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+	border-style: none;
+	padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+	outline: 1px dotted ButtonText
+}
+
+fieldset {
+	border: 1px solid silver;
+	margin: 0 2px;
+	padding: .35em .625em .75em
+}
+
+legend {
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal
+}
+
+textarea {
+	overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+	padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+	height: auto
+}
+
+[type=search] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+	-webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit
+}
+
+.w3-table,
+.w3-table-all {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	display: table
+}
+
+.w3-table-all {
+	border: 1px solid #ccc
+}
+
+.w3-bordered tr,
+.w3-table-all tr {
+	border-bottom: 1px solid #ddd
+}
+
+.w3-striped tbody tr:nth-child(even) {
+	background-color: #f1f1f1
+}
+
+.w3-table-all tr:nth-child(odd) {
+	background-color: #fff
+}
+
+.w3-table-all tr:nth-child(even) {
+	background-color: #f1f1f1
+}
+
+.w3-hoverable tbody tr:hover,
+.w3-ul.w3-hoverable li:hover {
+	background-color: #ccc
+}
+
+.w3-centered tr td,
+.w3-centered tr th {
+	text-align: center
+}
+
+.w3-table td,
+.w3-table th,
+.w3-table-all td,
+.w3-table-all th {
+	padding: 8px 8px;
+	display: table-cell;
+	text-align: left;
+	vertical-align: top
+}
+
+.w3-table td:first-child,
+.w3-table th:first-child,
+.w3-table-all td:first-child,
+.w3-table-all th:first-child {
+	padding-left: 16px
+}
+
+.w3-container {
+	box-sizing: border-box
+}
+
+.w3-container *,
+.w3-container ::after,
+.w3-container ::before {
+	box-sizing: inherit
+}
+
+.w3-bar:after,
+.w3-bar:before,
+.w3-cell-row:after,
+.w3-cell-row:before,
+.w3-clear:after,
+.w3-clear:before,
+.w3-container:after,
+.w3-container:before,
+.w3-panel:after,
+.w3-panel:before,
+.w3-row-padding:after,
+.w3-row-padding:before,
+.w3-row:after,
+.w3-row:before {
+	content: "";
+	display: table;
+	clear: both
+}
+
+.w3-container,
+.w3-panel {
+	padding: .01em 16px
+}
+
+@media (max-width:1205px) {
+	.w3-auto {
+		max-width: 95%
+	}
+}
+
+@media (max-width:600px) {
+	.w3-modal-content {
+		margin: 0 10px;
+		width: auto!important
+	}
+	.w3-modal {
+		padding-top: 30px
+	}
+	.w3-dropdown-click.w3-mobile .w3-dropdown-content,
+	.w3-dropdown-hover.w3-mobile .w3-dropdown-content {
+		position: relative
+	}
+	.w3-hide-small {
+		display: none!important
+	}
+	.w3-mobile {
+		display: block;
+		width: 100%!important
+	}
+	.w3-bar-item.w3-mobile,
+	.w3-dropdown-click.w3-mobile,
+	.w3-dropdown-hover.w3-mobile {
+		text-align: center
+	}
+	.w3-dropdown-click.w3-mobile,
+	.w3-dropdown-click.w3-mobile .w3-btn,
+	.w3-dropdown-click.w3-mobile .w3-button,
+	.w3-dropdown-hover.w3-mobile,
+	.w3-dropdown-hover.w3-mobile .w3-btn,
+	.w3-dropdown-hover.w3-mobile .w3-button {
+		width: 100%
+	}
+}
+
+@media (max-width:768px) {
+	.w3-modal-content {
+		width: 500px
+	}
+	.w3-modal {
+		padding-top: 50px
+	}
+}
+
+@media (min-width:993px) {
+	.w3-modal-content {
+		width: 900px
+	}
+	.w3-hide-large {
+		display: none!important
+	}
+	.w3-sidebar.w3-collapse {
+		display: block!important
+	}
+}
+
+@media (max-width:992px) and (min-width:601px) {
+	.w3-hide-medium {
+		display: none!important
+	}
+}
+
+@media (max-width:992px) {
+	.w3-sidebar.w3-collapse {
+		display: none
+	}
+	.w3-main {
+		margin-left: 0!important;
+		margin-right: 0!important
+	}
+	.w3-auto {
+		max-width: 100%
+	}
+}
+
+.w3-bar-block .w3-dropdown-click,
+.w3-bar-block .w3-dropdown-hover {
+	width: 100%
+}
+
+.w3-bar-block .w3-dropdown-click .w3-dropdown-content,
+.w3-bar-block .w3-dropdown-hover .w3-dropdown-content {
+	min-width: 100%
+}
+
+.w3-bar-block .w3-dropdown-click .w3-button,
+.w3-bar-block .w3-dropdown-hover .w3-button {
+	width: 100%;
+	text-align: left;
+	padding: 8px 16px
+}
+
+.w3-bar-block .w3-bar-item {
+	width: 100%;
+	display: block;
+	padding: 8px 16px;
+	text-align: left;
+	border: none;
+	white-space: normal;
+	float: none;
+	outline: 0
+}
+
+.w3-bar-block.w3-center .w3-bar-item {
+	text-align: center
+}
+
+.w3-round-small {
+	border-radius: 2px
+}
+
+.w3-round,
+.w3-round-medium {
+	border-radius: 4px
+}
+
+.w3-round-large {
+	border-radius: 8px
+}
+
+.w3-round-xlarge {
+	border-radius: 16px
+}
+
+.w3-round-xxlarge {
+	border-radius: 32px
+}
+
+.w3-btn,
+.w3-button {
+	border: none;
+	display: inline-block;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap
+}
+
+.w3-btn:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19)
+}
+
+.w3-btn,
+.w3-button {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.w3-btn:disabled,
+.w3-button:disabled,
+.w3-disabled {
+	cursor: not-allowed;
+	opacity: .3
+}
+
+.w3-btn.w3-disabled:hover,
+.w3-btn:disabled:hover {
+	box-shadow: none
+}
+
+.w3-block {
+	display: block;
+	width: 100%
+}
+/* End code copied from W3.CSS. */
+
+/* Section copied from W3.CSS's brown theme. */
+.w3-theme-l5 {
+	color: #000!important;
+	background-color: #f8f4f3!important
+}
+
+.w3-theme-l4 {
+	color: #000!important;
+	background-color: #e7dcd7!important
+}
+
+.w3-theme-l3 {
+	color: #000!important;
+	background-color: #d0b8b0!important
+}
+
+.w3-theme-l2 {
+	color: #fff!important;
+	background-color: #b89588!important
+}
+
+.w3-theme-l1 {
+	color: #fff!important;
+	background-color: #a07261!important
+}
+
+.w3-theme-d1 {
+	color: #fff!important;
+	background-color: #6d4d41!important
+}
+
+.w3-theme-d2 {
+	color: #fff!important;
+	background-color: #61443a!important
+}
+
+.w3-theme-d3 {
+	color: #fff!important;
+	background-color: #553c33!important
+}
+
+.w3-theme-d4 {
+	color: #fff!important;
+	background-color: #49332c!important
+}
+
+.w3-theme-d5 {
+	color: #fff!important;
+	background-color: #3d2b24!important
+}
+
+.w3-theme-light {
+	color: #000!important;
+	background-color: #f8f4f3!important
+}
+
+.w3-theme-dark {
+	color: #fff!important;
+	background-color: #3d2b24!important
+}
+
+.w3-theme-action {
+	color: #fff!important;
+	background-color: #3d2b24!important
+}
+
+.w3-theme {
+	color: #fff!important;
+	background-color: #795548!important
+}
+
+.w3-text-theme {
+	color: #795548!important
+}
+
+.w3-border-theme {
+	border-color: #795548!important
+}
+
+.w3-hover-theme:hover {
+	color: #fff!important;
+	background-color: #795548!important
+}
+
+.w3-hover-text-theme:hover {
+	color: #795548!important
+}
+
+.w3-hover-border-theme:hover {
+	border-color: #795548!important
+}
+
+/* End code copied from W3.CSS's brown theme. */
+
+
+
+/* Okay, NOW we're at the part I wrote. (The best part!) */
+
+:root {
+	scroll-behavior: smooth
+}
+
+#u-navbar-desktop #toc>#toc-action-bar {
+	padding: 0
+}
+
+#toc-action-bar>a,
+#toc>div.title {
+	font-family: MedievalSharp, cursive!important;
+	font-size: 130%;
+	font-weight: 700!important;
+	vertical-align: center;
+	color: #fff!important;
+	background-color: #a07261!important;
+	border-radius: 12px;
+	padding: .5rem 1rem
+}
+
+#u-navbar-desktop #toc-action-bar>a {
+	position: absolute;
+	bottom: 0;
+	margin: 1rem;
+	padding: 8px 16px;
+	margin: .5em 0!important;
+	width: 12.3rem;
+	bottom: .3rem
+}
+
+#u-navbar-desktop #toc {
+	background: initial;
+	border: initial;
+	font-weight: 700!important;
+	min-width: 12.5rem;
+	padding: 0 0 1.5em
+}
+
+#u-navbar-desktop #toc-list {
+	line-height: .5;
+	position: relative;
+	bottom: 16px
+}
+
+#u-navbar-desktop #toc-list>div {
+	line-height: 1.5;
+	font-weight: 700!important;
+	border-radius: 8px;
+	vertical-align: middle;
+	color: #000!important;
+	background-color: #e7dcd7!important;
+	width: 100%;
+	display: block;
+	padding: 8px 16px;
+	margin: .5em 0!important
+}
+
+#u-navbar-desktop>table {
+	padding: 8px 0!important
+}
+
+/* End file. */
