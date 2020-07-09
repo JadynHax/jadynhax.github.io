@@ -67,3 +67,29 @@ h3 {
 .page-foot p {
 	font-size:90%;
 }
+
+#navbar {
+	background-color:#0c0032;
+	overflow:hidden;
+}
+
+#navbar a {
+	float:left;
+	color:#f2f2f2;
+	text-align:center;
+	padding:0.9rem 1rem;
+	text-decoration:none;
+	font-weight:bold;
+	background-color:transparent;
+	transition:background-color,color,padding 0.5s;
+}
+
+#navbar a:hover {
+	background-color:#3500d3;
+	padding:1.1rem 1rem;
+}
+
+#navbar a.active {
+	background-color:#470aff;
+	color:#000;
+}
