@@ -43,11 +43,30 @@ h3 {
 
 .page-head h1 {
 	font-family: 'Elianto', 'Oxanium', sans-serif;
-	font-size: 200%;
+	font-size: 300%;
 	font-weight:normal;
 }
 
 .page-head,
-.page-foot {
+.page-foot h1,
+.page-foot h2,
+.page-foot h3,
+.page-foot h4,
+.page-foot h5,
+.page-foot h6 {
 	text-align:center;
+}
+
+.page-head h1 {
+	margin-bottom:1em;
+}
+
+.page-content *,
+.page-foot p {
+	margin:1em 2rem;
+	text-align:justify;
+}
+
+.page-foot p {
+	font-size:90%;
 }
