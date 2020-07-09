@@ -1,0 +1,11 @@
+/* Adding fonts I found that were really cool */
+@font-face {
+  font-family: 'Elianto';
+  src: url('/assets/fonts/Elianto-Regular.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/Elianto-Regular.svg#Elianto-Regular') format('svg'),
+       url('/assets/fonts/Elianto-Regular.ttf') format('truetype'),
+       url('/assets/fonts/Elianto-Regular.woff') format('woff'),
+       url('/assets/fonts/Elianto-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
