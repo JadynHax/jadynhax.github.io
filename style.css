@@ -53,6 +53,7 @@ h3 {
 }
 
 .page-head h1 div {
+	display:inline;
 	border-bottom:solid 1rem #0C0032;
 }
 
