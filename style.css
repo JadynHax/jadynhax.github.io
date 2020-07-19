@@ -45,7 +45,7 @@ h3 {
 }
 
 .page-content {
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
     margin: 0 2rem;
 }
 
@@ -54,6 +54,14 @@ h3 {
     font-size: 400%;
     font-weight: normal;
     margin-bottom: 1em;
+}
+
+.page-content *:first-child {
+    margin-top: none;
+}
+
+.page-content *:last-child {
+    margin-bottom: none;
 }
 
 .page-head h1 div {
@@ -74,15 +82,8 @@ h3 {
 
 .page-content *,
 .page-foot p {
+    margin: 1em 1rem;
     text-align: justify;
-}
-
-.page-content * {
-    margin: 1em 0;
-}
-
-.page-foot p {
-    margin: 1em 2rem;
 }
 
 .page-foot p {
@@ -113,10 +114,10 @@ h3 {
     color: #000;
 }
 
-.page-content:nth-of-type(even) {
+.page-content:nth-child(even) {
     background-color: #0c0032;
 }
 
-.page-content:nth-of-type(even) * {
+.page-content:nth-child(even) * {
     color: white;
 }
