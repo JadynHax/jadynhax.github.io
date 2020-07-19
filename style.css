@@ -14,6 +14,8 @@ Other potential colors
 .page-content,
 .page-foot {
     font-family: 'Exo 2', 'Oxanium', sans-serif;
+    padding: 0.5rem 0;
+    margin: 0 1rem;
 }
 
 /* Theme color palette stuff */
@@ -43,11 +45,6 @@ h1,
 h2,
 h3 {
     font-family: 'Oxanium', sans-serif;
-}
-
-.page-content {
-    padding: 0.5rem 0;
-    margin: 0 1rem;
 }
 
 .page-head h1 {
