@@ -3,7 +3,6 @@ Accent block background: #240090
 Bright accent block background: #3500d3
 Medium dark accent block background: #190061
 Dark accent block background: #0c0032
-
 Other potential colors
 #5f2fed
 #4310de
@@ -13,48 +12,48 @@ Other potential colors
 */
 
 .page-content {
-	font-family: 'Exo 2', 'Oxanium', sans-serif;
+    font-family: 'Exo 2', 'Oxanium', sans-serif;
 }
 
 /* Theme color palette stuff */
 .accent {
-	background-color: #240090;
-	color:#fff;
+    background-color: #240090;
+    color: #fff;
 }
 .bright-accent {
-	background-color: #3500d3;
-	color:#fff;
+    background-color: #3500d3;
+    color: #fff;
 }
 .mid-dark-accent {
-	background-color: #190061;
-	color:#fff;
+    background-color: #190061;
+    color: #fff;
 }
 .dark-accent {
-	background-color: #0c0032;
-	color: #fff;
+    background-color: #0c0032;
+    color: #fff;
 }
 
 /* Other styling */
 body {
-	margin:0;
+    margin: 0;
 }
 
 h1,
 h2,
 h3 {
-	font-family: 'Oxanium', sans-serif;
+    font-family: 'Oxanium', sans-serif;
 }
 
 .page-head h1 {
-	font-family: 'Elianto', 'Oxanium', sans-serif;
-	font-size: 400%;
-	font-weight:normal;
-	margin-bottom:1em;
+    font-family: 'Elianto', 'Oxanium', sans-serif;
+    font-size: 400%;
+    font-weight: normal;
+    margin-bottom: 1em;
 }
 
 .page-head h1 div {
-	display:inline;
-	border-bottom:solid 1rem #0C0032;
+    display: inline;
+    border-bottom: solid 1rem #0C0032;
 }
 
 .page-head,
@@ -64,41 +63,39 @@ h3 {
 .page-foot h4,
 .page-foot h5,
 .page-foot h6 {
-	text-align:center;
+    text-align: center;
 }
 
 .page-content *,
 .page-foot p {
-	margin:1em 2rem;
-	text-align:justify;
+    margin: 1em 2rem;
+    text-align: justify;
 }
 
 .page-foot p {
-	font-size:90%;
+    font-size: 90%;
 }
 
 #navbar {
-	background-color:#0c0032;
-	overflow:hidden;
+    background-color: #0c0032;
+    overflow: hidden;
 }
 
 #navbar a {
-	float:left;
-	color:#f2f2f2;
-	text-align:center;
-	padding:0.9rem 1rem;
-	text-decoration:none;
-	font-weight:bold;
-	background-color:transparent;
-	transition:background 0.25s,color 0.25s,padding 0.25s;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.9rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: transparent;
+    transition: background 0.25s,color 0.25s,padding 0.25s;
 }
-
 #navbar a:hover {
-	background-color:#3500d3;
-	padding:0.9rem 1.25rem;
+    background-color: #3500d3;
+    padding: 0.9rem 1.25rem;
 }
-
 #navbar a:active {
-	background-color:#470aff;
-	color:#000;
+    background-color: #470aff;
+    color: #000;
 }
