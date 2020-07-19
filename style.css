@@ -115,10 +115,10 @@ h3 {
     color: #000;
 }
 
-.page-content:nth-child(even) {
+.page-content:nth-of-type(even) {
     background-color: #0c0032;
 }
 
-.page-content:nth-child(even) * {
+.page-content:nth-of-type(even) * {
     color: white;
 }
