@@ -46,7 +46,7 @@ h3 {
 }
 
 .page-content {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0;
     margin: 0 1rem;
 }
 
@@ -113,12 +113,4 @@ h3 {
 #navbar a:active {
     background-color: #470aff;
     color: #000;
-}
-
-.page-content:nth-of-type(even) {
-    background-color: #0c0032;
-}
-
-.page-content:nth-of-type(even) * {
-    color: white;
 }
