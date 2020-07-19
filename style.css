@@ -11,7 +11,8 @@ Other potential colors
 #470aff
 */
 
-.page-content {
+.page-content,
+.page-foot {
     font-family: 'Exo 2', 'Oxanium', sans-serif;
 }
 
