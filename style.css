@@ -14,8 +14,15 @@ Other potential colors
 .page-content,
 .page-foot {
     font-family: 'Exo 2', 'Oxanium', sans-serif;
-    padding: 0.5rem 0;
     margin: 0 1rem;
+}
+
+.page-content {
+    padding: 0.5rem 0;
+}
+
+.page-foot {
+    padding: 0.125rem 0;
 }
 
 /* Theme color palette stuff */
