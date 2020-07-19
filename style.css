@@ -46,7 +46,7 @@ h3 {
 
 .page-content {
     padding: 0.5rem 1rem;
-    margin: 0 2rem;
+    margin: 0 1rem;
 }
 
 .page-head h1 {
@@ -57,11 +57,11 @@ h3 {
 }
 
 .page-content *:first-child {
-    margin-top: none;
+    margin-top: 0.25rem;
 }
 
 .page-content *:last-child {
-    margin-bottom: none;
+    margin-bottom: 0.25rem;
 }
 
 .page-head h1 div {
