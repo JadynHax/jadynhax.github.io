@@ -23,24 +23,29 @@ Other potential colors
 
 .page-foot {
     padding: 0.125rem 0;
+    background-color: #470aff;
+}
+
+.page-foot * {
+    color:whitesmoke;
 }
 
 /* Theme color palette stuff */
 .accent {
     background-color: #240090;
-    color: #fff;
+    color: whitesmoke;
 }
 .bright-accent {
     background-color: #3500d3;
-    color: #fff;
+    color: whitesmoke;
 }
 .mid-dark-accent {
     background-color: #190061;
-    color: #fff;
+    color: whitesmoke;
 }
 .dark-accent {
     background-color: #0c0032;
-    color: #fff;
+    color: whitesmoke;
 }
 
 /* Other styling */
@@ -107,7 +112,7 @@ h3 {
 
 #navbar a {
     float: left;
-    color: #f2f2f2;
+    color: whitesmoke;
     text-align: center;
     padding: 0.9rem 1rem;
     text-decoration: none;
