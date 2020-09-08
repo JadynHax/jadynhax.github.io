@@ -11,8 +11,8 @@ Other potential colors
 #470aff
 */
 
-.page-content *,
-.page-foot * {
+.page-content,
+.page-foot {
     font-family: 'Exo 2', 'Oxanium', sans-serif;
 }
 
@@ -129,7 +129,7 @@ h3 {
     text-align: center;
 }
 
-.page-content *,
+.page-content *:not(p *),
 .page-foot p {
     margin: 1em 1rem;
     text-align: justify;
