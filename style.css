@@ -101,7 +101,8 @@ section a {
     transition: color 0.25s;
 }
 
-section a:hover {
+section a:hover,
+section a:visited:hover {
     color: #fcfcfc;
 }
 
