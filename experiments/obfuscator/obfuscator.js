@@ -8,7 +8,7 @@ LICENSING INFORMATION
 	
 =======================================================================================================================================
 	
-	Sticky Navbar styling code.
+	Text obfuscator display code.
 	Copyright (C) 2020 Jason Rutz
 	
 	This program is free software: you can redistribute it and/or modify
@@ -24,8 +24,7 @@ LICENSING INFORMATION
 	You should have received a copy of the GNU General Public License
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 	
-	You can contact me via email at jaonhax@gmail.com, via Wikidot PM
-	(to JaonHax), or on the SCP Foundation IRC chatrooms (JaonHax).
+	You can contact the creator via email at jaonhax@gmail.com.
 */
 
 
