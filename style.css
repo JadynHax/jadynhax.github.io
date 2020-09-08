@@ -36,20 +36,71 @@ Other potential colors
     background-color: #240090;
     color: #fcfcfc;
 }
+.accent a {
+    color: #0c0032;
+    text-decoration: none;
+    font-weight: bold;
+}
+.accent a:visited {
+    color: #190061;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .bright-accent {
     background-color: #3500d3;
     color: #fcfcfc;
 }
+.bright-accent a {
+    color: #190061;
+    text-decoration: none;
+    font-weight: bold;
+}
+.bright-accent a:visited {
+    color: #0c0032;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .mid-dark-accent {
     background-color: #190061;
     color: #fcfcfc;
 }
+.mid-dark-accent a {
+    color: #3500d3;
+    text-decoration: none;
+    font-weight: bold;
+}
+.mid-dark-accent a:visited {
+    color: #240090;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .dark-accent {
     background-color: #0c0032;
     color: #fcfcfc;
 }
+.dark-accent a {
+    color: #240090;
+    text-decoration: none;
+    font-weight: bold;
+}
+.dark-accent a:visited {
+    color: #3500d3;
+    text-decoration: none;
+    font-weight: bold;
+}
 
 /* Other styling */
+section a {
+    transition: color 0.25s;
+}
+
+section a:hover {
+    color: #fcfcfc;
+}
+
 body {
     margin: 0;
     background-color: #fcfcfc;
@@ -122,7 +173,10 @@ h3 {
     text-decoration: none;
     font-weight: bold;
     background-color: transparent;
-    transition: background 0.25s,color 0.25s,padding 0.25s;
+    transition:
+        background 0.25s,
+        color 0.25s,
+        padding 0.25s;
 }
 #navbar a:hover {
     background-color: #3500d3;
