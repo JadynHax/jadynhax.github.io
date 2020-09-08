@@ -84,6 +84,7 @@ section a:visited:hover {
 body {
     margin: 0;
     background-color: #fcfcfc;
+    padding-bottom: 2rem;
 }
 
 h1,
