@@ -129,7 +129,7 @@ h3 {
     text-align: center;
 }
 
-.page-content *:not(p>*),
+.page-content>*,
 .page-foot p {
     margin: 1em 1rem;
     text-align: justify;
