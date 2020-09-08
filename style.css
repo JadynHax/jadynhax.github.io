@@ -68,12 +68,12 @@ Other potential colors
 
 /* Other styling */
 section a {
-    color: #afa5cc;
+    color: #7547ff;
     transition: color 0.25s;
 }
 
 section a:visited {
-    color: #470aff;
+    color: #6c3bff;
 }
 
 section a:hover,
