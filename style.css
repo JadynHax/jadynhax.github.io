@@ -32,6 +32,7 @@ Other potential colors
 }
 
 /* Theme color palette stuff */
+.accent,
 .accent * {
     background-color: #240090;
     color: #fcfcfc;
@@ -47,6 +48,7 @@ Other potential colors
     font-weight: bold;
 }
 
+.bright-accent,
 .bright-accent * {
     background-color: #3500d3;
     color: #fcfcfc;
@@ -62,6 +64,7 @@ Other potential colors
     font-weight: bold;
 }
 
+.mid-dark-accent,
 .mid-dark-accent * {
     background-color: #190061;
     color: #fcfcfc;
@@ -77,6 +80,7 @@ Other potential colors
     font-weight: bold;
 }
 
+.dark-accent,
 .dark-accent * {
     background-color: #0c0032;
     color: #fcfcfc;
