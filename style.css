@@ -33,13 +33,13 @@ Other potential colors
 
 /* Theme color palette stuff */
 .accent,
-.accent * {
+.accent *:not(a) {
     background-color: #240090;
     color: #fcfcfc;
 }
 
 .bright-accent,
-.bright-accent * {
+.bright-accent *:not(a) {
     background-color: #3500d3;
     color: #fcfcfc;
 }
@@ -55,25 +55,25 @@ Other potential colors
 }
 
 .mid-dark-accent,
-.mid-dark-accent * {
+.mid-dark-accent *:not(a) {
     background-color: #190061;
     color: #fcfcfc;
 }
 
 .dark-accent,
-.dark-accent * {
+.dark-accent *:not(a) {
     background-color: #0c0032;
     color: #fcfcfc;
 }
 
 /* Other styling */
 section a {
-    color: #3500d3;
+    color: #866ecc;
     transition: color 0.25s;
 }
 
 section a:visited {
-    color: #562dcf;
+    color: #afa5cc;
 }
 
 section a:hover,
