@@ -54,7 +54,7 @@ Other potential colors
     color: #fcfcfc;
 }
 .bright-accent a {
-    color: #190061;
+    color: #240090;
     text-decoration: none;
     font-weight: bold;
 }
@@ -98,6 +98,7 @@ Other potential colors
 
 /* Other styling */
 section a {
+    color: #3500d3;
     transition: color 0.25s;
 }
 
