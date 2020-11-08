@@ -113,14 +113,10 @@ h3 {
     margin-bottom: 0.25rem;
 }
 
-.page-head h1,
-.page-head h1 div {
-    padding: 0.25rem 2rem;
-    border-bottom: solid 1rem #190061;
-}
-
 .page-head h1 div {
     display: inline;
+    padding: 0.25rem 2rem;
+    border-bottom: solid 1rem #190061;
 }
 
 .page-head,
