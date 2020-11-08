@@ -9,7 +9,7 @@
                 "url":document.documentURI
             }
                 
-            $(function(){
+            $(document).ready(function(){
                 $("template:first").load("/base-head.html", function(responseTxt, statusTxt, xhr){
                     $("head").append(`<title>${pageMeta.title}</title>
         <meta name="application-name" content="${pageMeta.title}"/>
@@ -23,12 +23,17 @@
                     $("head").append(responseTxt);
                 });
             });
+            
+            $(window).on('load', function() {
+                $("#cover").hide();
+            });
         </script>
         <template></template>
     </head>
     <body>
+        <div id="cover" style="position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #000; z-index:9999;"></div>
         <header class="page-head">
-		<h1><div>JAONHAX'S TESTING PAGE</div></h1>
+            <h1><div>JAONHAX'S TESTING PAGE</div></h1>
         </header>
         <section class="page-content">
             <h3>Code Highlight Testing</h3>
