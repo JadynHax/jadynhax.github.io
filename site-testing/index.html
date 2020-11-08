@@ -9,7 +9,7 @@
                 "url":document.documentURI
             }
                 
-            $(document).ready(function(){
+            $(function(){
                 $("template:first").load("/base-head.html", function(responseTxt, statusTxt, xhr){
                     $("head").append(`<title>${pageMeta.title}</title>
         <meta name="application-name" content="${pageMeta.title}"/>
@@ -24,9 +24,9 @@
                 });
             });
         </script>
+        <template></template>
     </head>
     <body>
-        <template></template>
         <header class="page-head">
 		<h1><div>JAONHAX'S TESTING PAGE</div></h1>
         </header>
