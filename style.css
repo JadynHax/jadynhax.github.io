@@ -114,6 +114,7 @@ h3 {
 }
 
 .page-head h1 div {
+    display: inline-block;
     padding: 0.25rem 2rem;
     border-bottom: solid 1rem #190061;
 }
