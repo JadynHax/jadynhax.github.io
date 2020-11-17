@@ -206,32 +206,18 @@ h3 {
     left: calc(100% + 1ch);
     z-index: 1;
     
-    animation: tooltip-visibility 0.75s alternate both;
-    
     background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0032b0), to(#0c0032b0));
     background-image: -o-linear-gradient(#0c0032b0, #0c0032b0);
     background-image:    linear-gradient(#0c0032b0, #0c0032b0);
     
-    -webkit-transition: opacity 0.75s, background-size 0.75s;
-         -o-transition: opacity 0.75s, background-size 0.75s;
-            transition: opacity 0.75s, background-size 0.75s;
+    -webkit-transition: opacity 0.75s, background-size 0.75s, visibility 1.5s;
+         -o-transition: opacity 0.75s, background-size 0.75s, visibility 1.5s;
+            transition: opacity 0.75s, background-size 0.75s, visibility 1.5s;
     
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-}
-
-@keyframes tooltip-visibility {
-    0% {
-        visibility: visible;
-    }
-    99% {
-        visibility: visible;
-    }
-    100% {
-        visibility: hidden;
-    }
 }
 
 .tooltip-wrapper:hover > .tooltip {
