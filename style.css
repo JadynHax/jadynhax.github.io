@@ -211,6 +211,11 @@ h3 {
     width:    -moz-fit-content;
     width:         fit-content;
     
+    height: auto;
+    height: -webkit-fit-content;
+    height:    -moz-fit-content;
+    height:         fit-content;
+    
     background-image: -o-linear-gradient(#0c0032b0, #0c0032b0);
     background-image:    -webkit-gradient(linear, left top, left bottom, from(#0c0032b0), to(#0c0032b0));
     background-image:    linear-gradient(#0c0032b0, #0c0032b0);
