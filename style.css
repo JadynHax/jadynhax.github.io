@@ -104,7 +104,6 @@ h3 {
     font-size: 400%;
     font-weight: normal;
     text-transform: uppercase;
-    margin-bottom: 1rem;
 }
 
 .page-head > div {
@@ -115,7 +114,7 @@ h3 {
 }
 
 .page-head {
-    margin-bottom: calc(4em-1rem);
+    margin-bottom: 4em;
 }
 
 .page-content *:first-child,
@@ -191,7 +190,7 @@ h3 {
     display: inline-block;
 }
 .tooltip-wrapper > .tooltip {
-    visibility: hidden;
+    pointer-events: none;
     display: block;
     opacity: 0;
     min-width: 10vw;
@@ -203,14 +202,14 @@ h3 {
     border-radius: 4px;
     position: absolute;
     top: 0;
-    left: calc(100% + 1ch);
+    left: calc(100% + 0.5ch);
     z-index: 1;
     
     background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0032b0), to(#0c0032b0));
     background-image: -o-linear-gradient(#0c0032b0, #0c0032b0);
     background-image:    linear-gradient(#0c0032b0, #0c0032b0);
     
-    -webkit-transition: opacity 0.75s, background-size 0.75s;
+    -webkit-transition: opacity 0.75s, background-size 0.75s, pointer-events 0 ease 0.75s;
          -o-transition: opacity 0.75s, background-size 0.75s;
             transition: opacity 0.75s, background-size 0.75s;
     
@@ -221,12 +220,9 @@ h3 {
 }
 
 .tooltip-wrapper:hover > .tooltip {
-    visibility: visible;
+    pointer-events: auto;
     opacity: 1;
     background-size: 100% 100%;
-    -webkit-transition: visibility 0s 0.5s;
-         -o-transition: visibility 0s 0.5s;
-            transition: visibility 0s 0.5s;
 }
 
 /* TODO: Grid container styling */
