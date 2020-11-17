@@ -224,9 +224,9 @@ h3 {
     visibility: visible;
     opacity: 1;
     background-size: 100% 100%;
-    -webkit-transition: visibility 1.5s;
-         -o-transition: visibility 1.5s;
-            transition: visibility 1.5s;
+    -webkit-transition: visibility 0s 0.5s;
+         -o-transition: visibility 0s 0.5s;
+            transition: visibility 0s 0.5s;
 }
 
 /* TODO: Grid container styling */
