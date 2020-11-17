@@ -190,6 +190,7 @@ h3 {
     display: inline-block;
 }
 .tooltip-wrapper > .tooltip {
+    display: inline-block;
     pointer-events: none;
     text-align: left;
     opacity: 0;
