@@ -199,3 +199,11 @@ h3 {
     opacity: 1;
     background-size: 100% 100%;
 }
+
+/* TODO: Grid container styling */
+/* 
+.grid-container {
+    display: grid;
+    grid: none / auto auto auto auto auto;
+}
+ */
