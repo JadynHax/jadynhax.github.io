@@ -201,6 +201,8 @@ h3 {
     padding: 5px 10px;
     border-radius: 4px;
     position: absolute;
+    top: -1em;
+    left: calc(100%+1em);
     z-index: 1;
     
     background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0032b0), to(#0c0032b0));
