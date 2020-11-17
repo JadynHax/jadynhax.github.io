@@ -103,15 +103,16 @@ h3 {
     font-family: 'Elianto', 'Oxanium', sans-serif;
     font-size: 400%;
     font-weight: normal;
+    text-transform: uppercase;
 }
 
-.page-head center {
-    margin: auto;
+.page-head > div {
     font-family: 'Exo 2', 'Oxanium', sans-serif;
+    margin: auto;
+    width: 200px;
 }
 
-.page-head center > * {
-    margin: auto;
+.page-head > div * {
     text-align: left;
 }
 
