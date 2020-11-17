@@ -191,6 +191,7 @@ h3 {
 }
 .tooltip-wrapper > .tooltip {
     pointer-events: none;
+    text-align: left;
     display: block;
     opacity: 0;
     min-width: 10vw;
