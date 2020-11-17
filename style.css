@@ -195,7 +195,6 @@ h3 {
     text-align: left;
     opacity: 0;
     max-width: 60vw;
-    width: fit-content;
     background-repeat: no-repeat;
     background-size: 0% 100%;
     color: #fcfcfc;
@@ -206,8 +205,12 @@ h3 {
     left: calc(100% + 0.5ch);
     z-index: 1;
     
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0032b0), to(#0c0032b0));
+    width: -webkit-fit-content;
+    width:    -moz-fit-content;
+    width:         fit-content;
+    
     background-image: -o-linear-gradient(#0c0032b0, #0c0032b0);
+    background-image:    -webkit-gradient(linear, left top, left bottom, from(#0c0032b0), to(#0c0032b0));
     background-image:    linear-gradient(#0c0032b0, #0c0032b0);
     
     -webkit-transition: opacity 0.75s, background-size 0.75s;
