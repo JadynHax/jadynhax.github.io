@@ -104,17 +104,18 @@ h3 {
     font-size: 400%;
     font-weight: normal;
     text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
 .page-head > div {
+    display: inline-block;
     font-family: 'Exo 2', 'Oxanium', sans-serif;
-    margin: auto;
     width: 200px;
     text-align: left;
 }
 
 .page-head {
-    margin-bottom: 1em;
+    margin-bottom: calc(4em-1rem);
 }
 
 .page-content *:first-child,
