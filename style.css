@@ -209,9 +209,9 @@ h3 {
     background-image: -o-linear-gradient(#0c0032b0, #0c0032b0);
     background-image:    linear-gradient(#0c0032b0, #0c0032b0);
     
-    -webkit-transition: opacity 0.75s ease 0, background-size 0.75s ease 0, pointer-events 0 ease 0.75s;
-         -o-transition: opacity 0.75s ease 0, background-size 0.75s ease 0, pointer-events 0 ease 0.75s;
-            transition: opacity 0.75s ease 0, background-size 0.75s ease 0, pointer-events 0 ease 0.75s;
+    -webkit-transition: opacity 0.75s, background-size 0.75s, pointer-events 1.5s;
+         -o-transition: opacity 0.75s, background-size 0.75s, pointer-events 1.5s;
+            transition: opacity 0.75s, background-size 0.75s, pointer-events 1.5s;
     
     -webkit-user-select: none;
        -moz-user-select: none;
