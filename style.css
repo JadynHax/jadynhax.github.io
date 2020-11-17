@@ -190,6 +190,7 @@ h3 {
     display: inline-block;
 }
 .tooltip-wrapper > .tooltip {
+    overflow-y: auto;
     display: inline-block;
     pointer-events: none;
     text-align: left;
@@ -205,6 +206,7 @@ h3 {
     left: calc(100% + 0.5ch);
     z-index: 1;
     
+    width: auto;
     width: -webkit-fit-content;
     width:    -moz-fit-content;
     width:         fit-content;
