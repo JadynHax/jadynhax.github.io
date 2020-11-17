@@ -73,7 +73,10 @@ body:last-child {
 /* Other styling */
 section a {
     color: #6c3bff;
-    transition: color 0.25s;
+    
+    -webkit-transition: color 0.25s;
+         -o-transition: color 0.25s;
+            transition: color 0.25s;
 }
 
 section a:visited {
@@ -119,7 +122,7 @@ h3 {
     border-bottom: solid 1rem #190061;
 }
 
-.page-head,
+.page-head h1,
 .page-foot h1,
 .page-foot h2,
 .page-foot h3,
@@ -142,8 +145,10 @@ h3 {
 #navbar {
     background-color: #0c0032;
     overflow: hidden;
-    position: sticky;
     top: 0;
+    
+    position: -webkit-sticky;
+    position:         sticky;
 }
 
 #navbar a {
@@ -154,10 +159,10 @@ h3 {
     text-decoration: none;
     font-weight: bold;
     background-color: transparent;
-    transition:
-        background 0.25s,
-        color 0.25s,
-        padding 0.25s;
+    
+    -webkit-transition: background 0.25s, color 0.25s, padding 0.25s;
+         -o-transition: background 0.25s, color 0.25s, padding 0.25s;
+            transition: background 0.25s, color 0.25s, padding 0.25s;
 }
 #navbar a:hover {
     background-color: #3500d3;
@@ -178,23 +183,28 @@ h3 {
     display: block;
     opacity: 0;
     max-width: 700px;
-    background-image: linear-gradient(#0c0032b0, #0c0032b0);
     background-repeat: no-repeat;
     background-size: 0% 100%;
     color: #fcfcfc;
     padding: 5px 10px;
     border-radius: 4px;
-    transition: opacity 0.75s, background-size 0.75s;
-    pointer-events: none;
     position: absolute;
     z-index: 1;
+    
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0c0032b0), to(#0c0032b0));
+    background-image: -o-linear-gradient(#0c0032b0, #0c0032b0);
+    background-image:    linear-gradient(#0c0032b0, #0c0032b0);
+    
+    -webkit-transition: opacity 0.75s, background-size 0.75s;
+         -o-transition: opacity 0.75s, background-size 0.75s;
+            transition: opacity 0.75s, background-size 0.75s;
+    
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 .tooltip-wrapper:hover > .tooltip {
-    visibility: visible;
-    opacity: 1;
-    background-size: 100% 100%;
-}
-.tooltip-wrapper > .tooltip:hover {
     visibility: visible;
     opacity: 1;
     background-size: 100% 100%;
