@@ -105,9 +105,11 @@ h3 {
     font-weight: normal;
 }
 
-.page-head div,
 .page-head center {
     font-family: 'Exo 2', 'Oxanium', sans-serif;
+}
+
+.page-head center * {
     margin: initial auto;
     text-align: left;
 }
