@@ -100,17 +100,19 @@ h3 {
 }
 
 .page-head h1 {
+    font-family: 'Elianto', 'Oxanium', sans-serif;
     font-size: 400%;
     font-weight: normal;
-    margin-bottom: 1em;
+}
+
+.page-head div {
+    font-family: 'Exo 2', 'Oxanium', sans-serif;
+    margin: initial auto;
+    text-align: left;
 }
 
 .page-head {
-    font-family: 'Elianto', 'Oxanium', sans-serif;
-}
-
-.page-head *:not(h1) {
-    text-align: left;
+    margin-bottom: 1em;
 }
 
 .page-content *:first-child,
