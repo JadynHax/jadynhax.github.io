@@ -202,7 +202,7 @@ h3 {
     border-radius: 4px;
     position: absolute;
     top: -1em;
-    left: calc(100%+1em);
+    left: calc(100% + 1em);
     z-index: 1;
     
     animation: tooltip-visibility 0.75s;
