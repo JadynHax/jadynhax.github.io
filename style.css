@@ -195,6 +195,7 @@ h3 {
     text-align: left;
     opacity: 0;
     max-width: 60vw;
+    width: fit-content;
     background-repeat: no-repeat;
     background-size: 0% 100%;
     color: #fcfcfc;
