@@ -173,7 +173,7 @@ h3 {
     position: relative;
     display: inline-block;
 }
-.tooltip-wrapper .tooltip {
+.tooltip-wrapper > .tooltip {
     visibility: hidden;
     display: block;
     opacity: 0;
@@ -189,12 +189,12 @@ h3 {
     position: absolute;
     z-index: 1;
 }
-.tooltip-wrapper:hover .tooltip {
+.tooltip-wrapper:hover > .tooltip {
     visibility: visible;
     opacity: 1;
     background-size: 100% 100%;
 }
-.tooltip-wrapper .tooltip:hover {
+.tooltip-wrapper > .tooltip:hover {
     visibility: visible;
     opacity: 1;
     background-size: 100% 100%;
