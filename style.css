@@ -194,7 +194,8 @@ h3 {
     visibility: hidden;
     display: block;
     opacity: 0;
-    max-width: 700px;
+    min-width: 10vw;
+    max-width: 60vw;
     background-repeat: no-repeat;
     background-size: 0% 100%;
     color: #fcfcfc;
