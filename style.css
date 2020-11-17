@@ -106,11 +106,12 @@ h3 {
 }
 
 .page-head center {
+    margin: auto;
     font-family: 'Exo 2', 'Oxanium', sans-serif;
 }
 
-.page-head center * {
-    margin: initial auto;
+.page-head center > * {
+    margin: auto;
     text-align: left;
 }
 
