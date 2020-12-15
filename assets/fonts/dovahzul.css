@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'dovahzul';
-    src: url('Dovahzul.woff') format('woff'),
-         url('Dovahzul.ttf') format('truetype'),
+    src: url('Dovahzul.ttf') format('truetype'),
+         url('Dovahzul.woff') format('woff'),
          url('Dovahzul.svg#dovahzulregular') format('svg');
     font-weight: normal;
     font-style: normal;
