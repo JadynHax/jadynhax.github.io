@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'dovahzul';
+    src: url('dovahzul.woff') format('woff'),
+         url('dovahzul.ttf') format('truetype'),
+         url('dovahzul.svg#dovahzulregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
