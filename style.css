@@ -31,6 +31,11 @@ Other potential colors
     color: #fcfcfc;
 }
 
+.page-content p,
+.page-foot p {
+    text-indent: 2em;
+}
+
 body:last-child {
     margin-bottom: 1rem;
 }
