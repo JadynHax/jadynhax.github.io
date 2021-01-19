@@ -17,13 +17,13 @@ Other potential colors
 }
 
 .page-content {
-    margin: 0 2rem;
-    padding: 0.5rem 0;
+    margin: 0 1rem;
+    padding: 1rem 0;
 }
 
 .page-foot {
-    margin: 1rem 2rem;
-    padding: 0.125rem 0;
+    margin: 1rem;
+    padding: 0.125rem 1rem;
     background-color: #470aff;
 }
 
