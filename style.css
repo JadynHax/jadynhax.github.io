@@ -11,6 +11,16 @@ Other potential colors
 #470aff
 */
 
+:root {
+    --off-white: #fcfcfc;
+    --off-black: #030303;
+    --bright-accent: #3500d3;
+    --accent: #240090;
+    --mid-dark-accent: #190061;
+    --dark-accent: #0c0032;
+    --footer-background: #470aff;
+}
+
 .page-content,
 .page-foot {
     font-family: 'Exo 2', 'Oxanium', sans-serif;
@@ -21,14 +31,18 @@ Other potential colors
     padding: 1rem 0;
 }
 
+.page-content * {
+    color: var(--off-black);
+}
+
 .page-foot {
     margin: 1rem;
     padding: 0.125rem 1rem;
-    background-color: #470aff;
+    background-color: var(--footer-background);
 }
 
 .page-foot * {
-    color: #fcfcfc;
+    color: var(--off-white);
 }
 
 .page-content p,
@@ -43,36 +57,36 @@ body:last-child {
 /* Theme color palette stuff */
 .accent,
 .accent *:not(a) {
-    background-color: #240090;
-    color: #fcfcfc;
+    background-color: var(--accent);
+    color: var(--off-white);
 }
 
 .bright-accent,
 .bright-accent *:not(a) {
-    background-color: #3500d3;
-    color: #fcfcfc;
+    background-color: var(--bright-accent);
+    color: var(--off-white);
 }
 .bright-accent a {
-    color: #240090;
+    color: var(--accent);
     text-decoration: none;
     font-weight: bold;
 }
 .bright-accent a:visited {
-    color: #0c0032;
+    color: var(--dark-accent);
     text-decoration: none;
     font-weight: bold;
 }
 
 .mid-dark-accent,
 .mid-dark-accent *:not(a) {
-    background-color: #190061;
-    color: #fcfcfc;
+    background-color: var(--mid-dark-accent);
+    color: var(--off-white);
 }
 
 .dark-accent,
 .dark-accent *:not(a) {
-    background-color: #0c0032;
-    color: #fcfcfc;
+    background-color: var(--dark-accent);
+    color: var(--off-white);
 }
 
 /* Other styling */
@@ -90,12 +104,12 @@ section a:visited {
 
 section a:hover,
 section a:visited:hover {
-    color: #fcfcfc;
+    color: var(--off-white);
 }
 
 body {
     margin: 0;
-    background-color: #fcfcfc;
+    background-color: var(--off-white);
 }
 
 h1,
@@ -169,7 +183,7 @@ h3 {
 
 #navbar a {
     float: left;
-    color: #fcfcfc;
+    color: var(--off-white);
     text-align: center;
     padding: 0.9rem 1rem;
     text-decoration: none;
