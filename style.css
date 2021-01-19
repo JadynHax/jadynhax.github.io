@@ -17,12 +17,12 @@ Other potential colors
 }
 
 .page-content {
-    margin: 0 1rem;
+    margin: 0 2rem;
     padding: 0.5rem 0;
 }
 
 .page-foot {
-    margin: 1rem;
+    margin: 1rem 2rem;
     padding: 0.125rem 0;
     background-color: #470aff;
 }
@@ -122,12 +122,12 @@ h3 {
     margin-bottom: 4em;
 }
 
-.page-content *:first-child,
+.page-content>*:first-child,
 .page-foot p:first-of-type  {
     margin-top: 0.25rem;
 }
 
-.page-content *:last-child,
+.page-content>*:last-child,
 .page-foot p:last-of-type {
     margin-bottom: 0.25rem;
 }
