@@ -9,8 +9,8 @@ Potential colors to use if in need of variety
 
 /* Root variable definitions */
 :root {
-            --off-white: #fcfcfc;
-            --off-black: #030303;
+    --off-white: #fcfcfc;
+    --off-black: #030303;
 
             --pale-blue: #8e69ff;
       --very-light-blue: #6c3bff;
@@ -229,9 +229,9 @@ body:last-child {
     background-image:   -webkit-gradient(linear, left top, left bottom, from(var(--dark-accent)), to(var(--dark-accent)));
     background-image:    linear-gradient(var(--dark-accent), var(--dark-accent));
 
-    -webkit-transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
-         -o-transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
-            transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
+    -webkit-transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
+         -o-transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
+            transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
 
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -244,9 +244,79 @@ body:last-child {
     opacity: 1;
     background-size: 100% 100%;
 
-    -webkit-transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
-         -o-transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
-            transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
+    -webkit-transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
+         -o-transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
+            transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
+}
+
+/* Source view styling */
+#source-view-bkg {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0006;
+    z-index: 2;
+
+    -webkit-transition: opacity 0.75s;
+         -o-transition: opacity 0.75s;
+            transition: opacity 0.75s;
+}
+
+#source-view {
+    position: fixed;
+    height: 90vh;
+    width: 90vw;
+    top: 5vh;
+    left: 5vw;
+    border-radius: 1rem;
+    border: 3px solid #555;
+    padding 2em;
+}
+
+#source-view > code {
+    overflow-x: scroll;
+    overflow-y: auto;
+    max-width: calc(90vh-4em-5ch);
+}
+
+#close-source {
+    color: #aaa;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    -webkit-transition: color 0.25s;
+         -o-transition: color 0.25s;
+            transition: color 0.25s;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+#close-source:hover,
+#close-source:focus {
+    color: #000;
+    cursor: pointer;
+}
+
+#view-source {
+    z-index: 1;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.45rem 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px #888;
+
+    -webkit-transition: background 0.25s, color 0.25s, padding 0.25s;
+         -o-transition: background 0.25s, color 0.25s, padding 0.25s;
+            transition: background 0.25s, color 0.25s, padding 0.25s;
 }
 
 /* TODO: Grid container styling */
