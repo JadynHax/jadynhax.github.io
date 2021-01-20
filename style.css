@@ -275,7 +275,7 @@ body:last-child {
     left: 5vw;
     border-radius: 1rem;
     border: 3px solid #555;
-    padding 2em;
+    padding: 2em;
 }
 
 #source-view > code {
