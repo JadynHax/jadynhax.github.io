@@ -262,7 +262,6 @@ body:last-child {
     left: 0;
     background-color: #0006;
     z-index: 2;
-    overflow-y: scroll;
 
     -webkit-transition: opacity 0.75s;
          -o-transition: opacity 0.75s;
@@ -272,6 +271,7 @@ body:last-child {
 #source-view {
     background-color: hsl(220, 13%, 19%);
     width: 80%;
+    height: 90%;
     margin: 5% auto;
     border-radius: 1rem;
     border: 3px solid var(--mid-accent);
@@ -280,6 +280,7 @@ body:last-child {
 
 #source-view > div {
     overflow: scroll;
+    max-height: 75vh;
 }
 
 #source-view code.hljs.xml {
