@@ -291,9 +291,9 @@ body:last-child {
     font-weight: bold;
     text-decoration: none;
 
-    -webkit-transition: color 0.25s;
-         -o-transition: color 0.25s;
-            transition: color 0.25s;
+    -webkit-transition: color 0.25s ease, transform 0.25s linear;
+         -o-transition: color 0.25s ease, transform 0.25s linear;
+            transition: color 0.25s ease, transform 0.25s linear;
 
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -305,6 +305,7 @@ body:last-child {
 #close-source:focus {
     color: var(--very-light-accent);
     cursor: pointer;
+    transform: matrix(1.25, -180deg, 180deg, 1.25, 0, 0);
 }
 
 #view-source {
