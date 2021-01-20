@@ -254,6 +254,7 @@ body:last-child {
     pointer-events: none;
     opacity: 0;
     width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -264,20 +265,12 @@ body:last-child {
     -webkit-transition: opacity 0.75s;
          -o-transition: opacity 0.75s;
             transition: opacity 0.75s;
-
-    height: auto;
-    height: -webkit-fit-content;
-    height:    -moz-fit-content;
-    height:         fit-content;
 }
 
 #source-view {
     background-color: var(--off-white);
-    position: fixed;
-    height: 90%;
     width: 90%;
-    top: 5%;
-    left: 5%;
+    margin: 5% auto;
     border-radius: 1rem;
     border: 3px solid var(--mid-light-accent);
     padding: 2em;
