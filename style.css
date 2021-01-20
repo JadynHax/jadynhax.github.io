@@ -287,7 +287,7 @@ body:last-child {
 }
 
 #close-source {
-    color: var(--pale-accent);
+    color: var(--light-accent);
     float: right;
     font-size: 2.5rem;
     font-weight: bold;
@@ -305,7 +305,7 @@ body:last-child {
 
 #close-source:hover,
 #close-source:focus {
-    color: var(--light-accent);
+    color: var(--very-light-accent);
     cursor: pointer;
 }
 
