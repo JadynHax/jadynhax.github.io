@@ -269,19 +269,18 @@ body:last-child {
 #source-view {
     background-color: var(--off-white);
     position: fixed;
-    height: 90vh;
-    width: 90vw;
-    top: 5vh;
-    left: 5vw;
+    height: 90%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
     border-radius: 1rem;
-    border: 3px solid #555;
+    border: 3px solid var(--mid-light-accent);
     padding: 2em;
     overflow: scroll;
-    max-width: calc(90vh - 4em - 5ch);
 }
 
 #close-source {
-    color: #eee;
+    color: var(--dark-accent);
     float: right;
     font-size: 2.5rem;
     font-weight: bold;
