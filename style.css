@@ -285,6 +285,11 @@ body:last-child {
 }
 
 #close-source {
+    display: block;
+    height: 0.55em;
+    width: 0.55em;
+    line-height: 0.55;
+    text-align: center;
     color: var(--light-accent);
     float: right;
     font-size: 2.5rem;
@@ -305,7 +310,7 @@ body:last-child {
 #close-source:focus {
     color: var(--very-light-accent);
     cursor: pointer;
-    transform: matrix(1.25, -180deg, 180deg, 1.25, 0, 0);
+    transform: rotate(180deg);
 }
 
 #view-source {
