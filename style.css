@@ -276,6 +276,9 @@ body:last-child {
     border-radius: 1rem;
     border: 3px solid var(--mid-light-accent);
     padding: 2em;
+}
+
+#source-view > pre {
     overflow: scroll;
 }
 
