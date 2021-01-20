@@ -6,7 +6,7 @@ function htmlDecode(text) {
   return $('<div/>').html(text).text();
 }
 
-document.innerHTML += `
+document.body.innerHTML += `
         <div id="source-view-bkg">
             <span id="close-source">&times;</span>
             <h1>Page Source</h1>
