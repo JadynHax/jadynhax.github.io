@@ -1,9 +1,5 @@
 /*
-Accent block background: #240090
-Bright accent block background: #3500d3
-Medium dark accent block background: #190061
-Dark accent block background: #0c0032
-Other potential colors
+Potential colors to use if in need of variety
 #5f2fed
 #4310de
 #3713a1
@@ -11,14 +7,112 @@ Other potential colors
 #470aff
 */
 
+/* Root variable definitions */
 :root {
-    --off-white: #fcfcfc;
-    --off-black: #030303;
-    --bright-accent: #3500d3;
-    --accent: #240090;
-    --mid-dark-accent: #190061;
-    --dark-accent: #0c0032;
-    --footer-background: #470aff;
+            --off-white: #fcfcfc;
+            --off-black: #030303;
+
+            --pale-blue: #8e69ff;
+      --very-light-blue: #6c3bff;
+           --light-blue: #470aff;
+       --mid-light-blue: #3500d3;
+             --mid-blue: #240090;
+        --mid-dark-blue: #190061;
+            --dark-blue: #0c0032;
+
+          --pale-accent: var(--pale-blue);
+    --very-light-accent: var(--very-light-blue);
+         --light-accent: var(--light-blue);
+     --mid-light-accent: var(--mid-light-blue);
+           --mid-accent: var(--mid-blue);
+      --mid-dark-accent: var(--mid-dark-blue);
+          --dark-accent: var(--dark-blue);
+
+    /* Other Variables */
+    --url-color: var(--very-light-accent);
+    --url-visited-color: var(--pale-accent);
+    --url-hover-color: var(--off-white);
+
+    --text-color: var(--off-black);
+
+    --header-align: left;
+    --header-indent: 1rem;
+}
+
+/* Theme color palette stuff */
+.pale-accent {
+    background-color: var(--pale-accent);
+}
+
+.very-light-accent {
+    background-color: var(--very-light-accent);
+}
+
+.light-accent,
+.bright-accent {
+    background-color: var(--light-accent);
+}
+
+.mid-light-accent {
+    background-color: var(--mid-light-accent);
+}
+
+.mid-accent,
+.accent {
+    background-color: var(--mid-accent);
+}
+
+.mid-dark-accent {
+    background-color: var(--mid-dark-accent);
+}
+
+.dark-accent {
+    background-color: var(--dark-accent);
+}
+
+.pale-accent,
+.very-light-accent,
+.light-accent,
+.bright-accent {
+    --url-color: var(--mid-accent);
+    --url-visited-color: var(--dark-accent);
+}
+
+.pale-accent,
+.very-light-accent,
+.light-accent,
+.bright-accent,
+.mid-light-accent,
+.mid-accent,
+.accent,
+.mid-dark-accent,
+.dark-accent,
+.page-foot {
+    --text-color: var(--off-white);
+}
+
+/* Basic layout formatting */
+body {
+    margin: 0;
+    background-color: var(--off-white);
+}
+
+body:last-child {
+    margin-bottom: 1rem;
+}
+
+.page-head {
+    font-family: 'Elianto', 'Oxanium', sans-serif;
+    font-size: 400%;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 4em;
+}
+
+.page-head > h1 > div {
+    display: inline-block;
+    padding: 0.25rem 2rem;
+    border-bottom: solid 1rem var(--mid-dark-accent);
 }
 
 .page-content,
@@ -31,183 +125,77 @@ Other potential colors
     padding: 1rem 0;
 }
 
-.page-content * {
-    color: var(--off-black);
-}
-
 .page-foot {
     margin: 1rem;
     padding: 0.125rem 1rem;
-    background-color: var(--footer-background);
+    background-color: var(--light-accent);
 }
 
-.page-foot * {
-    color: var(--off-white);
+.page-content > p,
+.page-foot > p {
+    text-align: justify;
+    text-indent: 2rem;
 }
 
-.page-content p,
-.page-foot p {
-    text-indent: 2em;
+.page-foot > p {
+    font-size: 95%;
 }
 
-body:last-child {
-    margin-bottom: 1rem;
-}
-
-/* Theme color palette stuff */
-.accent,
-.accent *:not(a) {
-    background-color: var(--accent);
-    color: var(--off-white);
-}
-
-.bright-accent,
-.bright-accent *:not(a) {
-    background-color: var(--bright-accent);
-    color: var(--off-white);
-}
-.bright-accent a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: bold;
-}
-.bright-accent a:visited {
-    color: var(--dark-accent);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.mid-dark-accent,
-.mid-dark-accent *:not(a) {
-    background-color: var(--mid-dark-accent);
-    color: var(--off-white);
-}
-
-.dark-accent,
-.dark-accent *:not(a) {
-    background-color: var(--dark-accent);
-    color: var(--off-white);
-}
-
-/* Other styling */
-section a {
-    color: #6c3bff;
-    
-    -webkit-transition: color 0.25s;
-         -o-transition: color 0.25s;
-            transition: color 0.25s;
-}
-
-section a:visited {
-    color: #8e69ff;
-}
-
-section a:hover,
-section a:visited:hover {
-    color: var(--off-white);
-}
-
-body {
-    margin: 0;
-    background-color: var(--off-white);
-}
-
-h1,
-h2,
-h3 {
-    font-family: 'Oxanium', sans-serif;
-}
-
-.page-head h1 {
-    font-family: 'Elianto', 'Oxanium', sans-serif;
-    font-size: 400%;
-    font-weight: normal;
-    text-transform: uppercase;
-}
-
-.page-head > div {
-    display: inline-block;
-    font-family: 'Exo 2', 'Oxanium', sans-serif;
-    width: 200px;
-    text-align: left;
-}
-
-.page-head {
-    margin-bottom: 4em;
-}
-
-.page-content>*:first-child,
-.page-foot p:first-of-type  {
+.page-content > *:first-child,
+.page-foot > p:first-child  {
     margin-top: 0.25rem;
 }
 
-.page-content>*:last-child,
-.page-foot p:last-of-type {
+.page-content > *:last-child,
+.page-foot > p:last-child {
     margin-bottom: 0.25rem;
 }
 
-.page-head h1 div {
-    display: inline-block;
-    padding: 0.25rem 2rem;
-    border-bottom: solid 1rem #190061;
-}
-
 .page-head,
-.page-foot h1,
-.page-foot h2,
-.page-foot h3,
-.page-foot h4,
-.page-foot h5,
-.page-foot h6 {
-    text-align: center;
+.page-foot {
+    --header-align: center;
+    --header-indent: 0;
 }
 
-.page-content>*,
-.page-foot p {
-    margin: 1em 1rem;
-    text-align: justify;
-}
-
-.page-foot p {
-    font-size: 90%;
-}
-
+/* Navbar styling */
 #navbar {
-    background-color: #0c0032;
+    --url-color: var(--off-white);
+    --url-visited-color: var(--off-white);
+
+    background-color: var(--dark-accent);
     overflow: hidden;
     top: 0;
-    
+
     position: -webkit-sticky;
     position:         sticky;
 }
 
 #navbar a {
     float: left;
-    color: var(--off-white);
     text-align: center;
     padding: 0.9rem 1rem;
     text-decoration: none;
     font-weight: bold;
     background-color: transparent;
-    
+
     -webkit-transition: background 0.25s, color 0.25s, padding 0.25s;
          -o-transition: background 0.25s, color 0.25s, padding 0.25s;
             transition: background 0.25s, color 0.25s, padding 0.25s;
 }
-#navbar a:hover {
-    background-color: #3500d3;
+#navbar a:hover,
+#navbar a:focus {
+    background-color: var(--bright-accent);
     padding: 1rem 1.25rem;
 }
-#navbar a:active {
-    background-color: #470aff;
-    color: #000;
-}
 
-/* Tooltip styling and stuff */
+/* Tooltip styling */
 .tooltip-wrapper {
+    --dark-blue: #0c0032b0;
+
     position: relative;
     display: inline-block;
 }
+
 .tooltip-wrapper > .tooltip {
     overflow-y: auto;
     display: inline-block;
@@ -217,32 +205,32 @@ h3 {
     max-width: 60vw;
     background-repeat: no-repeat;
     background-size: 0% 100%;
-    color: #fcfcfc;
+    color: var(--off-white);
     padding: 5px 10px;
     border-radius: 4px;
     position: absolute;
     top: -5px;
     left: calc(100% + 0.5ch);
     z-index: 1;
-    
+
     width: auto;
     width: -webkit-fit-content;
     width:    -moz-fit-content;
     width:         fit-content;
-    
+
     height: auto;
     height: -webkit-fit-content;
     height:    -moz-fit-content;
     height:         fit-content;
-    
-    background-image: -o-linear-gradient(#0c0032b0, #0c0032b0);
-    background-image:    -webkit-gradient(linear, left top, left bottom, from(#0c0032b0), to(#0c0032b0));
-    background-image:    linear-gradient(#0c0032b0, #0c0032b0);
-    
-    -webkit-transition: opacity 0.75s, background-size 0.75s;
-         -o-transition: opacity 0.75s, background-size 0.75s;
-            transition: opacity 0.75s, background-size 0.75s;
-    
+
+    background-image: -o-linear-gradient(var(--dark-accent), var(--dark-accent));
+    background-image:   -webkit-gradient(linear, left top, left bottom, from(var(--dark-accent)), to(var(--dark-accent)));
+    background-image:    linear-gradient(var(--dark-accent), var(--dark-accent));
+
+    -webkit-transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
+         -o-transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
+            transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
+
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -253,6 +241,10 @@ h3 {
     pointer-events: auto;
     opacity: 1;
     background-size: 100% 100%;
+
+    -webkit-transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
+         -o-transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
+            transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
 }
 
 /* TODO: Grid container styling */
@@ -261,4 +253,51 @@ h3 {
     display: grid;
     grid: none / auto auto auto auto auto;
 }
- */
+*/
+
+/* Other styling */
+*:not(a) {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--url-color);
+
+    -webkit-transition: color 0.25s, font-weight 0.25s;
+         -o-transition: color 0.25s, font-weight 0.25s;
+            transition: color 0.25s, font-weight 0.25s;
+}
+
+a:visited {
+    color: var(--url-visited-color);
+}
+
+a:hover,
+a:focus,
+a:visited:hover,
+a:visited:focus {
+    text-decoration: none;
+    font-weight: bold;
+
+    color: var(--url-hover-color);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Oxanium', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: var(--header-align);
+    text-indent: var(--header-indent);
+}
+
+section > * {
+    margin: 1em 1rem;
+}
