@@ -24,9 +24,9 @@ window.onload = function() {
     fetch(window.location.pathname)
       .then(response => response.text())
       .then((data) => {$("#source-view > div > pre > code").text(data)})
+      .then(hljs.initHighlighting());
 
     document.querySelector("#view-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 1; document.querySelector("#source-view-bkg").style.pointerEvents = "auto"}
     document.querySelector("#close-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 0; document.querySelector("#source-view-bkg").style.pointerEvents = "none"}
-    hljs.initHighlighting()
     window.onload = undefined
 };
