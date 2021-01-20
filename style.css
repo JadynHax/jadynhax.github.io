@@ -278,7 +278,7 @@ body:last-child {
     padding: 2em;
 }
 
-#source-view > pre {
+#source-view > div {
     overflow: scroll;
 }
 
