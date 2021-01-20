@@ -19,7 +19,9 @@ window.onload = function() {
         </div>
         <button id="view-source"><i class="fas fa-file-code"></i> View Source</button>`
 
-    $("#source-view > pre > code").load(window.location.pathname, function(){$("#source-view > pre > code").text($("#source-view > pre > code").html())})
+    fetch(window.location.pathname)
+      .then(response => response.text())
+      .then((data) => {$("#source-view > pre > code").text(data)})
 
     document.querySelector("#view-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 1; document.querySelector("#source-view-bkg").style.pointerEvents = "auto"}
     document.querySelector("#close-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 0; document.querySelector("#source-view-bkg").style.pointerEvents = "none"}
