@@ -325,7 +325,7 @@ body:last-child {
 
 #view-source:hover,
 #view-source:focus {
-    background-color: var(--bright-accent);
+    background-color: var(--light-accent);
     color: var(--off-white);
     padding: 0.5625rem 0.625rem;
     cursor: pointer;
