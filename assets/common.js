@@ -13,7 +13,7 @@ window.onload = function() {
                 <span id="close-source">&times;</span>
                 <h1>Page Source</h1>
                 <div>
-                    <pre class="hljs html"><code>
+                    <pre class="html"><code>
                         <!-- Page source gets loaded here -->
                     </code></pre>
                 </div>
@@ -27,5 +27,6 @@ window.onload = function() {
 
     document.querySelector("#view-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 1; document.querySelector("#source-view-bkg").style.pointerEvents = "auto"}
     document.querySelector("#close-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 0; document.querySelector("#source-view-bkg").style.pointerEvents = "none"}
+    hljs.initHighlighting()
     window.onload = undefined
 };
