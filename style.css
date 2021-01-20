@@ -103,10 +103,13 @@ body:last-child {
 
 .page-head {
     font-family: 'Elianto', 'Oxanium', sans-serif;
-    font-size: 400%;
     font-weight: normal;
     text-transform: uppercase;
     margin-bottom: 4em;
+}
+
+.page-head > h1 {
+    font-size: 400%;
 }
 
 .page-head > h1 > div {
