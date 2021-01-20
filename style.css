@@ -251,6 +251,8 @@ body:last-child {
 
 /* Source view styling */
 #source-view-bkg {
+    --text-color: var(--off-white);
+
     pointer-events: none;
     opacity: 0;
     width: 100%;
@@ -268,11 +270,11 @@ body:last-child {
 }
 
 #source-view {
-    background-color: var(--off-white);
-    width: 90%;
+    background-color: #282c34;
+    width: 80%;
     margin: 5% auto;
     border-radius: 1rem;
-    border: 3px solid var(--mid-light-accent);
+    border: 3px solid var(--mid-accent);
     padding: 2em;
 }
 
@@ -281,7 +283,7 @@ body:last-child {
 }
 
 #close-source {
-    color: var(--dark-accent);
+    color: var(--pale-accent);
     float: right;
     font-size: 2.5rem;
     font-weight: bold;
