@@ -17,9 +17,10 @@ window.onload = function() {
         </div>
         <button id="view-source"><i class="fas fa-file-code"></i> View Source</button>`
 
-    $("#source-view > code").load(window.location.pathname, function(){$("#source-view > code").text($("#source-view > code").html());hljs.highlightAuto(document.querySelector("#source-view > code"))})
+    $("#source-view > code").load(window.location.pathname, function(){$("#source-view > code").text($("#source-view > code").html())})
 
     document.querySelector("#view-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 1; document.querySelector("#source-view-bkg").style.pointerEvents = "auto"}
     document.querySelector("#close-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 0; document.querySelector("#source-view-bkg").style.pointerEvents = "none"}
+    hljs.initHighlighting();
     window.onload = undefined
 };
