@@ -12,16 +12,18 @@ window.onload = function() {
             <div id="source-view">
                 <span id="close-source">&times;</span>
                 <h1>Page Source</h1>
-                <pre><code>
-                    <!-- Page source gets loaded here -->
-                </code></pre>
+                <div>
+                    <pre><code>
+                        <!-- Page source gets loaded here -->
+                    </code></pre>
+                </div>
             </div>
         </div>
         <button id="view-source"><i class="fas fa-file-code"></i> View Source</button>`
 
     fetch(window.location.pathname)
       .then(response => response.text())
-      .then((data) => {$("#source-view > pre > code").text(data)})
+      .then((data) => {$("#source-view > div > pre > code").text(data)})
 
     document.querySelector("#view-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 1; document.querySelector("#source-view-bkg").style.pointerEvents = "auto"}
     document.querySelector("#close-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 0; document.querySelector("#source-view-bkg").style.pointerEvents = "none"}
