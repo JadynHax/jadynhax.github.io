@@ -12,18 +12,16 @@ window.onload = function() {
             <div id="source-view">
                 <span id="close-source">&times;</span>
                 <h1>Page Source</h1>
-                <div>
-                    <pre class="html"><code>
-                        <!-- Page source gets loaded here -->
-                    </code></pre>
-                </div>
+                <pre class="html"><code>
+                    <!-- Page source gets loaded here -->
+                </code></pre>
             </div>
         </div>
         <button id="view-source"><i class="fas fa-file-code"></i> View Source</button>`
 
     fetch(window.location.pathname)
       .then(response => response.text())
-      .then((data) => {$("#source-view > div > pre > code").text(data)})
+      .then((data) => {$("#source-view > pre > code").text(data)})
       .then(function(){hljs.initHighlighting()});
 
     document.querySelector("#view-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 1; document.querySelector("#source-view-bkg").style.pointerEvents = "auto"}
