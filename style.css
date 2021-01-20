@@ -171,11 +171,12 @@ body:last-child {
 }
 
 #navbar a {
+    font-family: 'Elianto', 'Oxanium', sans-serif;
+    font-weight: bold;
     float: left;
     text-align: center;
     padding: 0.9rem 1rem;
     text-decoration: none;
-    font-weight: bold;
     background-color: transparent;
 
     -webkit-transition: background 0.25s, color 0.25s, padding 0.25s;
@@ -184,7 +185,7 @@ body:last-child {
 }
 #navbar a:hover,
 #navbar a:focus {
-    background-color: var(--bright-accent);
+    background-color: var(--light-accent);
     padding: 1rem 1.25rem;
 }
 
