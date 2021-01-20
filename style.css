@@ -281,7 +281,7 @@ body:last-child {
 #source-view > code {
     overflow-x: scroll;
     overflow-y: auto;
-    max-width: calc(90vh-4em-5ch);
+    max-width: calc(90vh - 4em - 5ch);
 }
 
 #close-source {
