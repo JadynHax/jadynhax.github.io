@@ -6,7 +6,6 @@ function htmlDecode(text) {
   return $('<div/>').html(text).text();
 }
 
-
 document.body.appendChild(new DOMParser().parseFromString(`<div>
             <div id="source-view-bkg">
                 <span id="close-source">&times;</span>
