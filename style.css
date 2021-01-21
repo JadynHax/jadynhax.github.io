@@ -284,7 +284,8 @@ body:last-child {
     box-shadow: 0px 0px 8px 0px hsl(220, 13%, 15%) inset;
 }
 
-#close-source {
+#close-source:before {
+    cursor: pointer;
     height: 0.55em;
     width: 0.55em;
     color: var(--light-accent);
@@ -300,10 +301,9 @@ body:last-child {
             user-select: none;
 }
 
-#close-source:hover,
-#close-source:focus {
+#close-source:before:hover,
+#close-source:before:focus {
     color: var(--very-light-accent);
-    cursor: pointer;
     transform: rotate(180deg);
 }
 
