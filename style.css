@@ -285,9 +285,12 @@ body:last-child {
 #close-source {
     display: inline-block;
     font-size: 1.5rem;
+    width: 1em;
+    height: 1em;
     cursor: pointer;
     float: right;
-    text-align: center;
+    text-align: right;
+    overflow: hidden;
 
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -296,11 +299,12 @@ body:last-child {
 }
 
 #close-source > span.fas {
+    vertical-align: top;
     font-size: 1em;
     line-height: 0.7;
     height: 0.75em;
     width: 0.75em;
-    margin: calc((100% - 0.75em) / 2) auto;
+    margin: 0 auto;
     color: var(--light-accent);
 
     -webkit-transition: color 0.25s ease, transform 0.25s linear, font-size 0.25s linear;
