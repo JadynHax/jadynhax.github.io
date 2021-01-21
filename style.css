@@ -256,7 +256,7 @@ body:last-child {
     pointer-events: none;
     opacity: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -269,9 +269,9 @@ body:last-child {
 }
 
 #source-view {
-    background-color: hsl(220, 13%, 19%);
+    background-color: #2a2f37;
     width: 80%;
-    height: 90%;
+    min-height: 90%;
     margin: 5% auto;
     border-radius: 1rem;
     border: 3px solid var(--mid-accent);
@@ -279,21 +279,16 @@ body:last-child {
 }
 
 #source-view > pre.html > code {
-    max-height: 75%;
-    overflow-y: scroll;
-    box-shadow: 0px 0px 8px 0px hsl(220, 13%, 15%) inset;
+    box-shadow: 0px 0px 8px 0px #21252b inset;
 }
 
-#close-source:before {
+#close-source {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 0.7;
     cursor: pointer;
-    height: 0.55em;
-    width: 0.55em;
-    color: var(--light-accent);
     float: right;
-
-    -webkit-transition: color 0.25s ease, transform 0.25s linear;
-         -o-transition: color 0.25s ease, transform 0.25s linear;
-            transition: color 0.25s ease, transform 0.25s linear;
+    text-align: center;
 
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -301,8 +296,21 @@ body:last-child {
             user-select: none;
 }
 
-#close-source:before:hover,
-#close-source:before:focus {
+#close-source > span.fas {
+    font-size: 1em;
+    height: 0.75em;
+    width: 0.75em;
+    margin: calc((100% - 0.75em) / 2) auto;
+    color: var(--light-accent);
+
+    -webkit-transition: color 0.25s ease, transform 0.25s linear, font-size 0.25s linear;
+         -o-transition: color 0.25s ease, transform 0.25s linear, font-size 0.25s linear;
+            transition: color 0.25s ease, transform 0.25s linear, font-size 0.25s linear;
+}
+
+#close-source:hover > span.fas,
+#close-source:focus > span.fas {
+    font-size: 1.25em;
     color: var(--very-light-accent);
     transform: rotate(180deg);
 }
