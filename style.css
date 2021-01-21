@@ -267,11 +267,6 @@ body:last-child {
     -webkit-transition: opacity 0.75s;
          -o-transition: opacity 0.75s;
             transition: opacity 0.75s;
-
-    height: auto;
-    height: -webkit-fit-content;
-    height:    -moz-fit-content;
-    height:         fit-content;
 }
 
 #source-view {
