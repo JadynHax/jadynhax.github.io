@@ -10,7 +10,7 @@ window.onload = function() {
     document.body.innerHTML += `
         <div id="source-view-bkg">
             <div id="source-view">
-                <span id="close-source">&times;</span>
+                <i class="fas fa-times" id="close-source"></i>
                 <h1>Page Source</h1>
                 <pre class="html"><code>
                     <!-- Page source gets loaded here -->
