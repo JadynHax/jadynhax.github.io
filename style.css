@@ -266,6 +266,11 @@ body:last-child {
     -webkit-transition: opacity 0.75s;
          -o-transition: opacity 0.75s;
             transition: opacity 0.75s;
+
+    height: auto;
+    height: -webkit-fit-content;
+    height:    -moz-fit-content;
+    height:         fit-content;
 }
 
 #source-view {
@@ -276,6 +281,11 @@ body:last-child {
     border-radius: 1rem;
     border: 3px solid var(--mid-accent);
     padding: 2em;
+
+    height: auto;
+    height: -webkit-fit-content;
+    height:    -moz-fit-content;
+    height:         fit-content;
 }
 
 #source-view > pre.html > code {
