@@ -256,12 +256,13 @@ body:last-child {
     pointer-events: none;
     opacity: 0;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     background-color: #0006;
     z-index: 2;
+    overflow: auto;
 
     -webkit-transition: opacity 0.75s;
          -o-transition: opacity 0.75s;
