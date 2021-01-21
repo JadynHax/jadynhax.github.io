@@ -285,7 +285,6 @@ body:last-child {
 #close-source {
     display: inline-block;
     font-size: 1.5rem;
-    line-height: 0.7;
     cursor: pointer;
     float: right;
     text-align: center;
@@ -298,6 +297,7 @@ body:last-child {
 
 #close-source > span.fas {
     font-size: 1em;
+    line-height: 0.7;
     height: 0.75em;
     width: 0.75em;
     margin: calc((100% - 0.75em) / 2) auto;
