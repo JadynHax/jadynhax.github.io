@@ -6,6 +6,16 @@ function htmlDecode(text) {
   return $('<div/>').html(text).text();
 }
 
+function openPageSource() {
+    document.querySelector("#source-view-bkg").style.opacity = 1;
+    document.querySelector("#source-view-bkg").style.pointerEvents = "auto";
+}
+
+function closePageSource() {
+    document.querySelector("#source-view-bkg").style.opacity = 0;
+    document.querySelector("#source-view-bkg").style.pointerEvents = "none";
+}
+
 window.onload = function() {
     document.body.innerHTML += `
         <div id="source-view-bkg">
@@ -26,7 +36,9 @@ window.onload = function() {
       .then((data) => {$("#source-view > pre > code").text(data)})
       .then(function(){hljs.initHighlighting()});
 
-    document.querySelector("#view-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 1; document.querySelector("#source-view-bkg").style.pointerEvents = "auto"}
-    document.querySelector("#close-source").onclick = function(){document.querySelector("#source-view-bkg").style.opacity = 0; document.querySelector("#source-view-bkg").style.pointerEvents = "none"}
+    document.querySelector("#view-source").onclick = function(){openPageSource()}
+    document.querySelector("#close-source").onclick = function(){closePageSource()}
+    document.querySelector("#source-view-bkg").onclick = function(){closePageSource()}
+    document.querySelector("#source-view").onclick = function(){}
     window.onload = undefined
 };
