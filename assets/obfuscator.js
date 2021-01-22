@@ -1,20 +1,16 @@
 /*
     Text obfuscator display code.
     Copyright (C) 2020 Jason Rutz
-
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
-
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
     You can contact the copyright holder via email at jaonhax@gmail.com.
 */
 
@@ -27,18 +23,36 @@ class Obfuscator {
             delay: 0,
             startTime: 40,
             endTime: 60,
+            dispTime: 1750,
             loop: false,
             chars: "0123456789!<>-_\\/[]{}—=+*^?#",
         };
-
-        var chars = this.params.chars;
         // Properly escape obfuChars and get the characters in an array
-        this.params.chars = this.getCharArray(chars.replace("<", "&lt;").replace(">", "&gt;"));
+        this.params.chars = this.getCharArray(this.params.chars);
 
         this.update = this.update.bind(this);
+        this.displayNext = this.displayNext.bind(this);
+    }
+    obfuscate() {
+        this.counter = 0;
+
+        setTimeout(this.displayNext, this.params.delay);
+    }
+    displayNext() {
+        // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
+        if (this.counter < this.params.phrases.length) {
+            this.setText(this.params.phrases[this.counter]).then(() => {
+                setTimeout(this.displayNext, this.params.dispTime);
+            })
+        }
+        // Increment counter
+        this.counter++;
+        // Make sure counter is mod phrases.length if looping
+        if (this.params.loop) {
+            this.counter %= this.params.phrases.length;
+        }
     }
     setText(newText) {
-        console.log("Setting text to '"+newText+"'...")
         newText = this.getCharArray(newText);
         const oldText = this.getCharArray(this.el.innerHTML);
         const length = Math.max(oldText.length, newText.length);
@@ -95,7 +109,7 @@ class Obfuscator {
                     // Push it to queue
                     this.queue[i].char = char
                 }
-                output += `${char}`;
+                output += char;
             } else {
                 // Stay static until start frame has passed
                 output += from;
@@ -120,20 +134,6 @@ class Obfuscator {
 function obfuscate(obfuParams, selector) {
     const el = document.querySelector(selector || ".obfuscate");
     const obfu = new Obfuscator(el, obfuParams);
-    var counter = 0;
-    const displayNext = () => {
-        // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
-        if (counter < obfu.params.phrases.length) {
-            obfu.setText(obfu.params.phrases[counter]).then(() => {
-                setTimeout(displayNext, (obfuParams.dispTime !== undefined) ? obfuParams.dispTime : 1750);
-            })
-        }
-        // Increment counter
-        counter++;
-        // Make sure counter is mod phrases.length if looping
-        if (obfu.params.loop) {
-            counter %= obfu.params.phrases.length;
-        }
-    }
-    setTimeout(displayNext, obfu.params.delay);
+
+    obfu.obfuscate()
 }
