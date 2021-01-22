@@ -155,8 +155,8 @@ class Obfuscator {
     }
 }
 
-function obfuscate(selector, obfuParams) {
-    const el = document.querySelector(selector);
+function obfuscate(obfuParams, selector) {
+    const el = document.querySelector(selector || ".obfuscate");
     const obfu = new Obfuscator(el, obfuParams);
 
     obfu.obfuscate()
