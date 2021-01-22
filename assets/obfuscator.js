@@ -137,7 +137,6 @@ function obfuscate(obfuParams, selector) {
     setTimeout(function(obfuParams, selector) {
         const el = document.querySelector(selector || ".obfuscate");
         const obfu = new Obfuscator(el, obfuParams);
-        console.log(obfu.params.chars)
 
         obfu.obfuscate();
     }, obfuParams.delay, obfuParams, selector)
