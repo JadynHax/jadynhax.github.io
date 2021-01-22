@@ -93,7 +93,7 @@ class Obfuscator {
                 complete++;
                 output += to;
             } else if (this.frame >= start) {
-                if (!char || Math.random() < 0.3) {
+                if (!char || Math.random() < 0.25) {
                     // Make a chance to sub in to or from characters
                     char = this.randomChar();
                     // Properly escape char
