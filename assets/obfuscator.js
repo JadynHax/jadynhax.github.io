@@ -34,13 +34,11 @@ class Obfuscator {
         this.displayNext = this.displayNext.bind(this);
     }
     obfuscate() {
-        console.log("Obfuscator.obfuscate()")
         this.counter = 0;
 
-        setTimeout(this.displayNext, this.params.delay);
+        return this.displayNext;
     }
     displayNext() {
-        console.log("Obfuscator.displayNext()")
         // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
         if (this.counter < this.params.phrases.length) {
             this.setText(this.params.phrases[this.counter]).then(() => {
@@ -55,7 +53,6 @@ class Obfuscator {
         }
     }
     setText(newText) {
-        console.log("Obfuscator.setText()")
         newText = this.getCharArray(newText);
         const oldText = this.getCharArray(this.el.innerHTML);
         const length = Math.max(oldText.length, newText.length);
@@ -80,7 +77,6 @@ class Obfuscator {
         return promise;
     }
     getCharArray(string) {
-        console.log("Obfuscator.getCharArray()")
         var charArray = [];
         if (string) {
             // Treat HTML entities, tags, and symbols as a single character.
@@ -96,7 +92,6 @@ class Obfuscator {
         return charArray
     }
     update() {
-        console.log("Obfuscator.update()")
         let output = '';
         let complete = 0;
         // Loop through the character queue, obfuscating each character along the way.
@@ -137,9 +132,8 @@ class Obfuscator {
 }
 
 function obfuscate(obfuParams, selector) {
-    console.log("obfuscate()")
     const el = document.querySelector(selector || ".obfuscate");
     const obfu = new Obfuscator(el, obfuParams);
 
-    obfu.obfuscate()
+    setTimeout(obfu.obfuscate(), obfu.params.delay);
 }
