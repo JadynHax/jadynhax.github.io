@@ -40,22 +40,22 @@ class Obfuscator {
         this.displayNext = this.displayNext.bind(this);
     }
     obfuscate() {
-        var counter = 0;
+        this.counter = 0;
 
         setTimeout(this.displayNext, this.params.delay);
     }
     displayNext() {
         // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
-        if (counter < this.params.phrases.length) {
-            this.setText(this.params.phrases[counter]).then(() => {
+        if (this.counter < this.params.phrases.length) {
+            this.setText(this.params.phrases[this.counter]).then(() => {
                 setTimeout(this.displayNext, this.params.dispTime);
             })
         }
         // Increment counter
-        counter++;
+        this.counter++;
         // Make sure counter is mod phrases.length if looping
         if (this.params.loop) {
-            counter %= this.params.phrases.length;
+            this.counter %= this.params.phrases.length;
         }
     }
     setText(newText) {
