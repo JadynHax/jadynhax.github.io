@@ -132,8 +132,10 @@ class Obfuscator {
 }
 
 function obfuscate(obfuParams, selector) {
-    const el = document.querySelector(selector || ".obfuscate");
-    const obfu = new Obfuscator(el, obfuParams);
+    setTimeout(function(obfuParams, selector) {
+        const el = document.querySelector(selector || ".obfuscate");
+        const obfu = new Obfuscator(el, obfuParams);
 
-    setTimeout(obfu.obfuscate(), obfu.params.delay);
+        setTimeout(obfu.obfuscate(), obfu.params.delay);
+    }, 100, obfuParams, selector)
 }
