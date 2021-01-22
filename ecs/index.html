@@ -44,7 +44,7 @@
         <header class="page-head">
             <h1><div class="obfuscate">HEY THERE!</div></h1>
             <script type="text/javascript">
-                const obfuData = {
+                var obfuData = {
                     "delay":3000,
                     "startTime":40,
                     "endTime":60,
@@ -65,8 +65,7 @@
                         'HEY THERE!',
                     ],
                 }
-                var obfu = new Obfuscator(document.querySelector(".obfuscate"), obfuData);
-                obfuscate(obfu)
+                obfuscate(".obfuscate", obfuData)
             </script>
         </header>
         <section class="page-content mid-dark-accent">
