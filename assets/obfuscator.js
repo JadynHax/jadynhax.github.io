@@ -139,7 +139,7 @@ function obfuscate(obfuscator) {
         // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
         if (0 <= counter < obfuscator.params.phrases.length) {
             obfuscator.setText(obfuscator.params.phrases[counter]).then(() => {
-                obfuscator(displayNext, obfuscator.params.dispTime);
+                setTimeout(displayNext, obfuscator.params.dispTime);
             })
         }
         // Increment counter
