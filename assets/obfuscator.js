@@ -95,8 +95,7 @@ class Obfuscator {
             } else if (this.frame >= start) {
                 if (!char || Math.random() < 0.28) {
                     // Make a chance to sub in to or from characters
-                    let sub = (this.frame >= (end + start) / 2) ? to : from;
-                    char = (Math.random() < 0.1) ? sub : this.randomChar();
+                    char = this.randomChar();
                     // Properly escape char
                     char = (char == "<") ? "&lt;" : char;
                     char = (char == ">") ? "&gt;" : char;
