@@ -44,7 +44,7 @@ class Obfuscator {
             // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
             if (counter < this.params.phrases.length) {
                 this.setText(this.params.phrases[counter]).then(() => {
-                    setTimeout(displayNext.call, this.params.dispTime, this);
+                    setTimeout(function(){displayNext.call(this)}, this.params.dispTime);
                 })
             }
             // Increment counter
@@ -55,7 +55,7 @@ class Obfuscator {
             }
         }
 
-        setTimeout(displayNext.call, this.params.delay, this);
+        setTimeout(function(){displayNext.call(this)}, this.params.delay);
     }
     setText(newText) {
         newText = this.getCharArray(newText);
