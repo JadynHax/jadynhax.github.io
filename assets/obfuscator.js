@@ -53,24 +53,6 @@ class Obfuscator {
         };
         this.update = this.update.bind(this);
     }
-    obfuscate() {
-        var counter = 0;
-        const displayNext = (obfuscator) => {
-            // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
-            if (0 <= counter < obfuscator.params.phrases.length) {
-                obfuscator.setText(obfuscator.params.phrases[counter]).then(() => {
-                    setTimeout(displayNext, obfuscator.params.dispTime, obfuscator);
-                })
-            }
-            // Increment counter
-            counter++;
-            // Make sure counter is mod phrases.length if looping
-            if (obfuscator.params.loop) {
-                counter %= obfuscator.params.phrases.length;
-            }
-        }
-        setTimeout(displayNext, this.params.delay, this);
-    }
     setText(newText) {
         newText = this.getCharArray(newText);
         const oldText = this.getCharArray(this.el.innerHTML);
@@ -148,5 +130,20 @@ function obfuscateElement(selector, obfuParams) {
     const el = document.querySelector(selector);
     const obfu = new Obfuscator(el, obfuParams);
 
-    obfu.obfuscate();
+    var counter = 0;
+    const displayNext = () => {
+        // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
+        if (0 <= counter < obfu.params.phrases.length) {
+            obfu.setText(obfu.params.phrases[counter]).then(() => {
+                obfu(displayNext, obfu.params.dispTime, obfu);
+            })
+        }
+        // Increment counter
+        counter++;
+        // Make sure counter is mod phrases.length if looping
+        if (obfu.params.loop) {
+            counter %= obfu.params.phrases.length;
+        }
+    }
+    setTimeout(displayNext, obfu.params.delay);
 }
