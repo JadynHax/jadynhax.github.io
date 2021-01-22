@@ -136,8 +136,8 @@ function obfuscate(obfuParams, selector) {
         dispTime: 1750,
         loop: false,
         chars: "0123456789!<>-_\\/[]{}—=+*^?#",
-        speed: 0.3,
-        accelFactor: 0.5,
+        speed: 0.4,
+        accelFactor: 0.1,
     };
     setTimeout(function(obfuParams, selector) {
         const el = document.querySelector(selector || ".obfuscate");
