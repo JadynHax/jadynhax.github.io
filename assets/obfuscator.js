@@ -19,14 +19,6 @@ class Obfuscator {
         // Actual class attribute assignments
         this.el = el;
         this.params = params
-        this.params.prototype = {
-            delay: 0,
-            startTime: 40,
-            endTime: 60,
-            dispTime: 1750,
-            loop: false,
-            chars: "0123456789!<>-_\\/[]{}—=+*^?#",
-        };
         // Properly escape obfuChars and get the characters in an array
         this.params.chars = this.getCharArray(this.params.chars);
 
@@ -131,6 +123,14 @@ class Obfuscator {
 }
 
 function obfuscate(obfuParams, selector) {
+    obfuParams.prototype = {
+        delay: 3000,
+        startTime: 40,
+        endTime: 60,
+        dispTime: 1750,
+        loop: false,
+        chars: "0123456789!<>-_\\/[]{}—=+*^?#",
+    };
     setTimeout(function(obfuParams, selector) {
         const el = document.querySelector(selector || ".obfuscate");
         const obfu = new Obfuscator(el, obfuParams);
