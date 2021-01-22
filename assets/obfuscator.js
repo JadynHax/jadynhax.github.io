@@ -129,8 +129,8 @@ class Obfuscator {
 }
 
 function obfuscate(obfuParams, selector) {
-    for (item of [["delay", 3000], ["startTime", 40], ["endTime", 60], ["dispTime", 1750], ["loop", false], ["chars", "0123456789!<>-_\\/[]{}—=+*^?#"], ["speed": 0.3], ["accelFactor", 0.5]) {
-        if obfuParams[item[0]] === undefined {
+    for (item of [["delay", 3000], ["startTime", 40], ["endTime", 60], ["dispTime", 1750], ["loop", false], ["chars", "0123456789!<>-_\\/[]{}—=+*^?#"], ["speed", 0.3], ["accelFactor", 0.5]) {
+        if (obfuParams[item[0]] === undefined) {
             obfuParams[item[0]] = item[1];
         }
     }
