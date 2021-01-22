@@ -35,8 +35,7 @@ class Obfuscator {
     }
     obfuscate() {
         this.counter = 0;
-
-        return this.displayNext;
+        this.displayNext();
     }
     displayNext() {
         // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
@@ -136,6 +135,6 @@ function obfuscate(obfuParams, selector) {
         const el = document.querySelector(selector || ".obfuscate");
         const obfu = new Obfuscator(el, obfuParams);
 
-        setTimeout(obfu.obfuscate(), obfu.params.delay);
-    }, 100, obfuParams, selector)
+        obfu.obfuscate());
+    }, obfuParams.delay, obfuParams, selector)
 }
