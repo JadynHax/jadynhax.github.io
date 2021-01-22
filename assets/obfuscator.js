@@ -47,8 +47,8 @@ class Obfuscator {
     displayNext() {
         // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
         if (this.counter < this.params.phrases.length) {
-            this.setText(this.params.phrases[this.counter]).then(() => {
-                setTimeout(this.displayNext, this.params.dispTime);
+            this.setText(this.params.phrases[this.counter]).then((obj) => {
+                setTimeout(obj.displayNext, obj.params.dispTime);
             })
         }
         // Increment counter
@@ -129,7 +129,7 @@ class Obfuscator {
         this.el.innerHTML = output;
         if (complete === this.queue.length) {
             // Resolve the Promise, allowing for post-animation operations
-            this.resolve();
+            this.resolve(this);
         } else {
             // Request the next animation frame when done if still going.
             this.frameRequest = requestAnimationFrame(this.update);
