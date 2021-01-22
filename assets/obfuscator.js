@@ -41,7 +41,7 @@ class Obfuscator {
         chars = this.getCharArray(chars.replace("<", "&lt;").replace(">", "&gt;"));
 
         // Actual class attribute assignments
-        this.el = typeof el == "object" ? el : document.querySelector(el);
+        this.el = el;
         this.params = {
             "delay": delay,
             "startTime": startTime,
@@ -97,14 +97,24 @@ class Obfuscator {
         let complete = 0;
         // Loop through the character queue, obfuscating each character along the way.
         for (let i = 0; i < this.queue.length; i++) {
-            let { from, to, start, end } = this.queue[i];
+            let { from, to, start, end, char } = this.queue[i];
             if (this.frame >= end) {
                 // Count completed characters
                 complete++;
                 output += to;
             } else if (this.frame >= start) {
-                // Make a chance to sub in to or from characters
-                output += `<span>` + ((Math.random() < 0.1) ? ((this.frame >= (end + start) / 2) ? to : from) : this.randomChar()) + `</span>`;
+                if (!char || Math.random() < 0.28) {
+                    // Make a chance to sub in to or from characters
+                    let sub = (this.frame >= (end + start) / 2) ? to : from;
+                    char = (Math.random() < 0.1) ? sub : this.randomChar();
+                    // Properly escape char
+                    char = (char == "<") ? "&lt;" : char;
+                    char = (char == ">") ? "&gt;" : char;
+                    char = (char == "&") ? "&amp;" : char;
+                    // Push it to queue
+                    this.queue[i].char = char
+                }
+                output += char;
             } else {
                 // Stay static until start frame has passed
                 output += from;
