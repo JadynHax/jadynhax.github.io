@@ -20,36 +20,19 @@
 
 class Obfuscator {
     constructor(el, params) {
-        // Backwards compatibility for params
-        params.startTime = params.startTime || params.start_time;
-        params.endTime = params.endTime || params.end_time;
-        params.dispTime = params.dispTime || params.disp_time;
-        params.chars = params.chars || params.obfu_chars;
-
-        // Get only the parameters we need, as well as setting defaults
-        var {
-            delay = 0,
-            startTime = 40,
-            endTime = 60,
-            dispTime = 1750,
-            loop = false,
-            chars = "0123456789!<>-_\\/[]{}—=+*^?#",
-            phrases,
-        } = params
-
         // Properly escape obfuChars and get the characters in an array
         chars = this.getCharArray(chars.replace("<", "&lt;").replace(">", "&gt;"));
 
         // Actual class attribute assignments
         this.el = el;
-        this.params = {
-            "delay": delay,
-            "startTime": startTime,
-            "endTime": endTime,
-            "dispTime": dispTime,
-            "loop": loop,
-            "chars": chars,
-            "phrases": phrases,
+        this.params = params
+        this.params.prototype = {
+            delay: 0,
+            startTime: 40,
+            endTime: 60,
+            dispTime: 1750,
+            loop: false,
+            chars: "0123456789!<>-_\\/[]{}—=+*^?#",
         };
         this.update = this.update.bind(this);
     }
