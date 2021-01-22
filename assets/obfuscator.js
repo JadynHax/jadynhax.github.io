@@ -45,10 +45,13 @@ class Obfuscator {
         setTimeout(this.displayNext, this.params.delay);
     }
     displayNext() {
+        console.log("Displaying next phrase...")
         const obfu = this
         // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
         if (this.counter < this.params.phrases.length) {
             this.setText(this.params.phrases[this.counter]).then(() => {
+                console.log(obfu);
+                console.log("Moving to next displayNext call...")
                 setTimeout(obfu.displayNext, obfu.params.dispTime);
             })
         }
@@ -60,6 +63,7 @@ class Obfuscator {
         }
     }
     setText(newText) {
+        console.log("Setting text to '"+newText+"'...")
         newText = this.getCharArray(newText);
         const oldText = this.getCharArray(this.el.innerHTML);
         const length = Math.max(oldText.length, newText.length);
