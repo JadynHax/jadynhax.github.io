@@ -19,8 +19,6 @@ class Obfuscator {
         // Actual class attribute assignments
         this.el = el;
         this.params = params
-        // Properly escape obfuChars and get the characters in an array
-        this.params.chars = this.getCharArray(this.params.chars);
 
         this.update = this.update.bind(this);
         this.displayNext = this.displayNext.bind(this);
@@ -56,8 +54,8 @@ class Obfuscator {
             const from = oldText[i] || '';
             const to = newText[i] || '';
             // Determine a good random start time
-            const start = Math.floor(Math.random() * this.params.startTime);
-            const end = start + Math.floor(Math.random() * this.params.endTime);
+            const start = Math.max(Math.floor(Math.random() * this.params.startTime), Math.floor(Math.random() * this.params.startTime));
+            const end = start + Math.max(Math.floor(Math.random() * this.params.endTime), Math.floor(Math.random() * this.params.endTime));
             this.queue.push({ from, to, start, end });
         }
         // Make sure old animation is canceled so we can start a new one
@@ -87,7 +85,7 @@ class Obfuscator {
         let complete = 0;
         // Count completed characters
         for (let i = 0; i < this.queue.length; i++) {
-            let { from, to, start, end, char } = this.queue[i];
+            let { end } = this.queue[i];
             if (this.frame >= end) {
                 complete++;
             }
@@ -144,6 +142,7 @@ function obfuscate(obfuParams, selector) {
     setTimeout(function(obfuParams, selector) {
         const el = document.querySelector(selector || ".obfuscate");
         const obfu = new Obfuscator(el, obfuParams);
+        console.log(obfu.params.chars)
 
         obfu.obfuscate();
     }, obfuParams.delay, obfuParams, selector)
