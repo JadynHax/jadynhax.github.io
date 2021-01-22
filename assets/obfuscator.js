@@ -42,7 +42,6 @@ class Obfuscator {
 
         // Actual class attribute assignments
         this.el = typeof el == "object" ? el : document.querySelector(el);
-        this.counter = 0;
         this.params = {
             "delay": delay,
             "startTime": startTime,
@@ -55,19 +54,19 @@ class Obfuscator {
         this.update = this.update.bind(this);
     }
     obfuscate() {
-        this.counter = 0
+        var counter = 0;
         const displayNext = () => {
             // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
-            if (0 <= this.counter < this.params.phrases.length) {
-                this.setText(this.params.phrases[this.counter]).then(() => {
+            if (0 <= counter < this.params.phrases.length) {
+                this.setText(this.params.phrases[counter]).then(() => {
                     setTimeout(displayNext, this.params.dispTime);
                 })
             }
             // Increment counter
-            this.counter++;
+            counter++;
             // Make sure counter is mod phrases.length if looping
             if (this.params.loop) {
-                this.counter %= this.params.phrases.length;
+                counter %= this.params.phrases.length;
             }
         }
         setTimeout(displayNext, this.params.delay);
