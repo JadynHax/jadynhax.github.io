@@ -55,21 +55,21 @@ class Obfuscator {
     }
     obfuscate() {
         var counter = 0;
-        const displayNext = () => {
+        const displayNext = (obfuscator) => {
             // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
-            if (0 <= counter < this.params.phrases.length) {
-                this.setText(this.params.phrases[counter]).then(() => {
-                    setTimeout(displayNext, this.params.dispTime);
+            if (0 <= counter < obfuscator.params.phrases.length) {
+                obfuscator.setText(obfuscator.params.phrases[counter]).then(() => {
+                    setTimeout(displayNext, obfuscator.params.dispTime, obfuscator);
                 })
             }
             // Increment counter
             counter++;
             // Make sure counter is mod phrases.length if looping
-            if (this.params.loop) {
-                counter %= this.params.phrases.length;
+            if (obfuscator.params.loop) {
+                counter %= obfuscator.params.phrases.length;
             }
         }
-        setTimeout(displayNext, this.params.delay);
+        setTimeout(displayNext, this.params.delay, this);
     }
     setText(newText) {
         newText = this.getCharArray(newText);
