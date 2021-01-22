@@ -32,8 +32,9 @@ class Obfuscator {
             chars: "0123456789!<>-_\\/[]{}—=+*^?#",
         };
 
+        var chars = this.params.chars;
         // Properly escape obfuChars and get the characters in an array
-        this.params.chars = this.getCharArray(this.params.chars.replace("<", "&lt;").replace(">", "&gt;"));
+        this.params.chars = this.getCharArray(chars.replace("<", "&lt;").replace(">", "&gt;"));
 
         this.update = this.update.bind(this);
     }
