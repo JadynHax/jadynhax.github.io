@@ -96,7 +96,7 @@ class Obfuscator {
             if (this.frame >= end) {
                 output += to;
             } else if (this.frame >= start) {
-                if (!char || Math.random() < Math.min(complete / this.queue.length, (this.queue.length - complete) / this.queue.length) * this.params.speed + this.params.speed * 0.5) {
+                if (!char || Math.random() < Math.min(complete / this.queue.length, (this.queue.length - complete) / this.queue.length) * 2 * this.params.speed * this.params.accelFactor + this.params.speed * (1 - this.params.accelFactor)) {
                     // Make a chance to sub in to or from characters
                     char = this.randomChar();
                     // Properly escape char
@@ -129,15 +129,11 @@ class Obfuscator {
 }
 
 function obfuscate(obfuParams, selector) {
-    obfuParams.prototype = {
-        delay: 3000,
-        startTime: 40,
-        endTime: 60,
-        dispTime: 1750,
-        loop: false,
-        chars: "0123456789!<>-_\\/[]{}—=+*^?#",
-        speed: 0.4,
-    };
+    for (item of [["delay", 3000], ["startTime", 40], ["endTime", 60], ["dispTime", 1750], ["loop", false], ["chars", "0123456789!<>-_\\/[]{}—=+*^?#"], ["speed": 0.3], ["accelFactor", 0.5]) {
+        if obfuParams[item[0]] === undefined {
+            obfuParams[item[0]] = item[1];
+        }
+    }
     setTimeout(function(obfuParams, selector) {
         const el = document.querySelector(selector || ".obfuscate");
         const obfu = new Obfuscator(el, obfuParams);
