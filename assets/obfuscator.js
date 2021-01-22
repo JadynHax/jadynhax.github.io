@@ -40,7 +40,7 @@ class Obfuscator {
     }
     obfuscate() {
         var counter = 0;
-        const displayNext = () => {
+        function displayNext() {
             // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
             if (counter < this.params.phrases.length) {
                 this.setText(this.params.phrases[counter]).then(() => {
