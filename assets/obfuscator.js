@@ -20,9 +20,6 @@
 
 class Obfuscator {
     constructor(el, params) {
-        // Properly escape obfuChars and get the characters in an array
-        chars = this.getCharArray(chars.replace("<", "&lt;").replace(">", "&gt;"));
-
         // Actual class attribute assignments
         this.el = el;
         this.params = params
@@ -34,6 +31,10 @@ class Obfuscator {
             loop: false,
             chars: "0123456789!<>-_\\/[]{}—=+*^?#",
         };
+
+        // Properly escape obfuChars and get the characters in an array
+        this.params.chars = this.getCharArray(this.params.chars.replace("<", "&lt;").replace(">", "&gt;"));
+
         this.update = this.update.bind(this);
     }
     obfuscate () {
