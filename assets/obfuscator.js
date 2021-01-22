@@ -37,30 +37,6 @@ class Obfuscator {
         this.params.chars = this.getCharArray(chars.replace("<", "&lt;").replace(">", "&gt;"));
 
         this.update = this.update.bind(this);
-        this.displayNext = this.displayNext.bind(this);
-    }
-    obfuscate() {
-        this.counter = 0;
-
-        setTimeout(this.displayNext, this.params.delay);
-    }
-    displayNext() {
-        console.log("Displaying next phrase...")
-        const obfu = this
-        // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
-        if (this.counter < this.params.phrases.length) {
-            this.setText(this.params.phrases[this.counter]).then(() => {
-                console.log(obfu);
-                console.log("Moving to next displayNext call...")
-                setTimeout(obfu.displayNext, obfu.params.dispTime);
-            })
-        }
-        // Increment counter
-        this.counter++;
-        // Make sure counter is mod phrases.length if looping
-        if (this.params.loop) {
-            this.counter %= this.params.phrases.length;
-        }
     }
     setText(newText) {
         console.log("Setting text to '"+newText+"'...")
@@ -149,6 +125,20 @@ class Obfuscator {
 function obfuscate(obfuParams, selector) {
     const el = document.querySelector(selector || ".obfuscate");
     const obfu = new Obfuscator(el, obfuParams);
-
-    obfu.obfuscate()
+    var counter = 0;
+    const displayNext = () => {
+        // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
+        if (counter < obfu.params.phrases.length) {
+            obfu.setText(obfu.params.phrases[counter]).then(() => {
+                setTimeout(displayNext, obfu.params.dispTime);
+            })
+        }
+        // Increment counter
+        counter++;
+        // Make sure counter is mod phrases.length if looping
+        if (obfu.params.loop) {
+            counter %= obfu.params.phrases.length;
+        }
+    }
+    setTimeout(displayNext, obfu.params.delay);
 }
