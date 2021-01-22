@@ -37,6 +37,7 @@ class Obfuscator {
         this.params.chars = this.getCharArray(chars.replace("<", "&lt;").replace(">", "&gt;"));
 
         this.update = this.update.bind(this);
+        this.displayNext = this.displayNext.bind(this);
     }
     obfuscate() {
         var counter = 0;
