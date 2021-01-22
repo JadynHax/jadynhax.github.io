@@ -98,7 +98,7 @@ class Obfuscator {
             if (this.frame >= end) {
                 output += to;
             } else if (this.frame >= start) {
-                if (!char || Math.random() < Math.min(complete / this.queue.length, (this.queue.length - complete) / this.queue.length) * this.params.rampFactor) {
+                if (!char || Math.random() < Math.min(complete / this.queue.length, (this.queue.length - complete) / this.queue.length) * 2 * this.params.speed * this.params.accelFactor + this.params.speed * (1 - this.params.accelFactor)) {
                     // Make a chance to sub in to or from characters
                     char = this.randomChar();
                     // Properly escape char
@@ -138,7 +138,8 @@ function obfuscate(obfuParams, selector) {
         dispTime: 1750,
         loop: false,
         chars: "0123456789!<>-_\\/[]{}—=+*^?#",
-        rampFactor: 0.5,
+        speed: 0.3,
+        accelFactor: 0.5,
     };
     setTimeout(function(obfuParams, selector) {
         const el = document.querySelector(selector || ".obfuscate");
