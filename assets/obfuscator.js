@@ -85,15 +85,20 @@ class Obfuscator {
     update() {
         let output = '';
         let complete = 0;
+        // Count completed characters
+        for (let i = 0; i < this.queue.length; i++) {
+            let { from, to, start, end, char } = this.queue[i];
+            if (this.frame >= end) {
+                complete++;
+            }
+        }
         // Loop through the character queue, obfuscating each character along the way.
         for (let i = 0; i < this.queue.length; i++) {
             let { from, to, start, end, char } = this.queue[i];
             if (this.frame >= end) {
-                // Count completed characters
-                complete++;
                 output += to;
             } else if (this.frame >= start) {
-                if (!char || Math.random() < 0.25) {
+                if (!char || Math.random() < Math.min(complete / this.queue.length, (this.queue.length - complete) / this.queue.length) * 0.3) {
                     // Make a chance to sub in to or from characters
                     char = this.randomChar();
                     // Properly escape char
