@@ -40,22 +40,22 @@ class Obfuscator {
     }
     obfuscate() {
         var counter = 0;
-        function displayNext() {
+        function displayNext(obfu) {
             // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
-            if (counter < this.params.phrases.length) {
-                this.setText(this.params.phrases[counter]).then(() => {
-                    setTimeout(function(){displayNext.call(this)}, this.params.dispTime);
+            if (counter < obfu.params.phrases.length) {
+                obfu.setText(obfu.params.phrases[counter]).then(() => {
+                    setTimeout(displayNext, obfu.params.dispTime, obfu);
                 })
             }
             // Increment counter
             counter++;
             // Make sure counter is mod phrases.length if looping
-            if (this.params.loop) {
-                counter %= this.params.phrases.length;
+            if (obfu.params.loop) {
+                counter %= obfu.params.phrases.length;
             }
         }
 
-        setTimeout(function(){displayNext.call(this)}, this.params.delay);
+        setTimeout(displayNext, this.params.delay, this);
     }
     setText(newText) {
         newText = this.getCharArray(newText);
