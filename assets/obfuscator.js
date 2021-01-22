@@ -27,7 +27,6 @@ class Obfuscator {
             delay: 0,
             startTime: 40,
             endTime: 60,
-            dispTime: 1750,
             loop: false,
             chars: "0123456789!<>-_\\/[]{}—=+*^?#",
         };
@@ -130,7 +129,7 @@ function obfuscate(obfuParams, selector) {
         // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
         if (counter < obfu.params.phrases.length) {
             obfu.setText(obfu.params.phrases[counter]).then(() => {
-                setTimeout(displayNext, obfu.params.dispTime);
+                setTimeout(displayNext, (obfuParams.dispTime !== undefined) ? obfuParams.dispTime : 1750);
             })
         }
         // Increment counter
