@@ -38,7 +38,7 @@ class Obfuscator {
         } = params
 
         // Properly escape obfuChars and get the characters in an array
-        obfuChars = this.getCharArray(obfuChars.replace("<", "&lt;").replace(">", "&gt;"));
+        chars = this.getCharArray(chars.replace("<", "&lt;").replace(">", "&gt;"));
 
         // Actual class attribute assignments
         this.el = typeof el == "object" ? el : document.querySelector(el);
