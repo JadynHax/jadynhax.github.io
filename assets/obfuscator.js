@@ -38,16 +38,16 @@ class Obfuscator {
 
         this.update = this.update.bind(this);
     }
-    obfuscate () {
+    obfuscate() {
         this.counter = 0;
 
-        setTimeout(function(obj){obj.displayNext.call(obj)}, this.params.delay, this);
+        setTimeout(this.displayNext.call, this.params.delay, this);
     }
     displayNext() {
         // Transition to the next phrase and set up the next displayNext call, or stop displaying if done.
         if (this.counter < this.params.phrases.length) {
             this.setText(this.params.phrases[this.counter]).then(() => {
-                setTimeout(function(obj){obj.displayNext.call(obj)}, this.params.dispTime, this);
+                setTimeout(this.displayNext.call, this.params.dispTime, this);
             })
         }
         // Increment counter
