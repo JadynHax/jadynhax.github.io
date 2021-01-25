@@ -37,8 +37,8 @@ window.onload = function() {
       .then(function(){hljs.initHighlighting()});
 
     document.querySelector("#view-source").onclick = function(){openPageSource()}
-    document.querySelector("#close-source").onclick = function(){closePageSource()}
     document.querySelector("#source-view-bkg").onclick = function(){closePageSource()}
-    document.querySelector("#source-view").onclick = function(){openPageSource()}
+    document.querySelector("#source-view").onclick = function(){setTimeout(openPageSource, 10)}
+    document.querySelector("#close-source").onclick = function(){setTimeout(closePageSource, 20)}
     window.onload = undefined
 };
