@@ -38,7 +38,7 @@ window.onload = function() {
 
     document.querySelector("#view-source").onclick = function(){openPageSource()}
     document.querySelector("#source-view-bkg").onclick = function(){closePageSource()}
-    document.querySelector("#source-view").onclick = function(){setTimeout(openPageSource, 10)}
-    document.querySelector("#close-source").onclick = function(){setTimeout(closePageSource, 20)}
+    document.querySelector("#source-view").onclick = function(){setTimeout(openPageSource, 1)}
+    document.querySelector("#close-source").onclick = function(){setTimeout(closePageSource, 2)}
     window.onload = undefined
 };
