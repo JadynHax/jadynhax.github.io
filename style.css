@@ -270,6 +270,7 @@ body:last-child {
 }
 
 #source-view {
+    z-index: 3;
     background-color: #2a2f37;
     width: 80%;
     min-height: 90%;
@@ -289,6 +290,7 @@ body:last-child {
 }
 
 #close-source {
+    z-index: 4;
     display: inline-block;
     font-size: 1.5rem;
     width: 1em;
@@ -296,7 +298,6 @@ body:last-child {
     cursor: pointer;
     float: right;
     text-align: right;
-    overflow: hidden;
 
     -webkit-user-select: none;
        -moz-user-select: none;
