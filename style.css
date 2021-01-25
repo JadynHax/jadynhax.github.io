@@ -244,9 +244,9 @@ body:last-child {
     pointer-events: auto;
     background-size: 100% 100%;
 
-    -webkit-transition: color 0.25s ease 0.75s, background-size 0.25s ease 0s;
-         -o-transition: color 0.25s ease 0.75s, background-size 0.25s ease 0s;
-            transition: color 0.25s ease 0.75s, background-size 0.25s ease 0s;
+    -webkit-transition: color 0.25s ease 0.25s, background-size 0.25s ease 0s;
+         -o-transition: color 0.25s ease 0.25s, background-size 0.25s ease 0s;
+            transition: color 0.25s ease 0.25s, background-size 0.25s ease 0s;
 }
 
 /* Source view styling */
