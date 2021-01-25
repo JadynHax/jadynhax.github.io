@@ -41,7 +41,11 @@
     </head>
     <body>
         <div id="navbar" class="navbar"></div>
-        <script>$('#navbar').load('/ecs/navbar.html')</script>
+        <script>
+            $(document).ready(function(){
+                $('#navbar').load('/ecs/navbar.html')
+            });
+        </script>
         <header class="page-head" style="color:var(--mid-accent)">
             <h1><div>Assignment 2 - Images, Links, & Styling</div></h1>
         </header>
