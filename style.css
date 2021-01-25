@@ -342,21 +342,31 @@ body:last-child {
             transition: background 0.25s, color 0.25s, padding 0.25s;
 }
 
-#view-source:hover,
-#view-source:focus {
+#view-source:hover {
     background-color: var(--light-accent);
     color: var(--off-white);
     padding: 0.5625rem 0.625rem;
     cursor: pointer;
 }
 
-/* TODO: Grid container styling */
-/* 
-.grid-container {
+/* Grid styling */ 
+.card-grid {
     display: grid;
-    grid: none / auto auto auto auto auto;
+    grid-gap: 0.5rem;
+    grid: 250px / auto auto auto;
+    
 }
-*/
+
+.card-grid > .card-grid-item {
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px 1px #888;
+    transition: box-shadow 0.25s;
+}
+
+.card-grid > .card-grid-item:hover {
+    box-shadow: 2px 2px 4px 1px #888;
+}
+/* TODO: Finish grid styling */
 
 /* Other styling */
 *:not(a) {
@@ -380,7 +390,6 @@ a:focus,
 a:visited:hover,
 a:visited:focus {
     text-decoration: none;
-    font-weight: bold;
 
     color: var(--url-hover-color);
 }
