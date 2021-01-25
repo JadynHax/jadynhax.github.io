@@ -44,7 +44,11 @@
     </head>
     <body>
         <div id="navbar" class="navbar"></div>
-        <script>$('#navbar').load('/navbar.html')</script>
+        <script>
+            $(document).ready(function(){
+                $('#navbar').load('/navbar.html')
+            });
+        </script>
         <header class="page-head">
             <h1><div><!-- Insert page header here --></div></h1>
         </header>
