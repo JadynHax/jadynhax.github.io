@@ -205,7 +205,6 @@ body:last-child {
     display: inline-block;
     pointer-events: none;
     text-align: left;
-    opacity: 0;
     max-width: 60vw;
     background-repeat: no-repeat;
     background-size: 0% 100%;
