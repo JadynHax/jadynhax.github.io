@@ -200,6 +200,7 @@ body:last-child {
 .tooltip-wrapper > .tooltip {
     --text-color: var(--off-white);
 
+    color: transparent;
     overflow-y: auto;
     display: inline-block;
     pointer-events: none;
@@ -229,9 +230,9 @@ body:last-child {
     background-image:   -webkit-gradient(linear, left top, left bottom, from(var(--dark-accent)), to(var(--dark-accent)));
     background-image:    linear-gradient(var(--dark-accent), var(--dark-accent));
 
-    -webkit-transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
-         -o-transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
-            transition: opacity 0.75s ease 0s, background-size 0.75s ease 0.75s, pointer-events 0.5s linear 0.5s;
+    -webkit-transition: color 0.75s ease 0s, background-size 0.75s ease 0.75s;
+         -o-transition: color 0.75s ease 0s, background-size 0.75s ease 0.75s;
+            transition: color 0.75s ease 0s, background-size 0.75s ease 0.75s;
 
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -240,13 +241,13 @@ body:last-child {
 }
 
 .tooltip-wrapper:hover > .tooltip {
+    color: var(--text-color);
     pointer-events: auto;
-    opacity: 1;
     background-size: 100% 100%;
 
-    -webkit-transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
-         -o-transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
-            transition: opacity 0.75s ease 0.75s, background-size 0.75s ease 0s;
+    -webkit-transition: color 0.75s ease 0.75s, background-size 0.75s ease 0s;
+         -o-transition: color 0.75s ease 0.75s, background-size 0.75s ease 0s;
+            transition: color 0.75s ease 0.75s, background-size 0.75s ease 0s;
 }
 
 /* Source view styling */
