@@ -134,13 +134,13 @@ function obfuscate(obfuParams, selector) {
             obfuParams[item[0]] = item[1];
         }
     }
-    this.obfuParams = obfuParams;
-    this.selector = selector;
     
     document.addEventListener("DOMContentLoaded", function(){
-        const el = document.querySelector(selector || ".obfuscate");
-        const obfu = new Obfuscator(el, obfuParams);
+        setTimeout(function(obfuParams, selector){
+            const el = document.querySelector(selector || ".obfuscate");
+            const obfu = new Obfuscator(el, obfuParams);
 
-        setTimeout(obfu.obfuscate, obfuParams.delay);
+           obfu.obfuscate, obfuParams.delay);
+        }, obfuParams.delay, obfuParams, selector);
     })
 }
