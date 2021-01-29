@@ -129,15 +129,18 @@ class Obfuscator {
 }
 
 function obfuscate(obfuParams, selector) {
-    for (item of [["delay", 3000], ["startTime", 40], ["endTime", 60], ["dispTime", 1750], ["loop", false], ["chars", "0123456789!<>-_\\/[]{}—=+*^?#"], ["speed", 0.3], ["accelFactor", 0.5]]) {
+    for (item of [["delay", 0], ["startTime", 40], ["endTime", 60], ["dispTime", 1750], ["loop", false], ["chars", "0123456789!<>-_\\/[]{}—=+*^?#"], ["speed", 0.3], ["accelFactor", 0.5]]) {
         if (obfuParams[item[0]] === undefined) {
             obfuParams[item[0]] = item[1];
         }
     }
-    setTimeout(function(obfuParams, selector) {
-        const el = document.querySelector(selector || ".obfuscate");
-        const obfu = new Obfuscator(el, obfuParams);
+    this.obfuParams = obfuParams;
+    this.selector = selector;
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        const el = document.querySelector(this.selector || ".obfuscate");
+        const obfu = new Obfuscator(el, this.obfuParams);
 
-        obfu.obfuscate();
-    }, obfuParams.delay, obfuParams, selector)
+        setTimeout(obfu.obfuscate, this.obfuParams.delay);
+    })
 }
