@@ -137,10 +137,10 @@ function obfuscate(obfuParams, selector) {
     this.obfuParams = obfuParams;
     this.selector = selector;
     
-    document.addEventListener("DOMContentLoaded", () => {
-        const el = document.querySelector(this.selector || ".obfuscate");
-        const obfu = new Obfuscator(el, this.obfuParams);
+    document.addEventListener("DOMContentLoaded", function(){
+        const el = document.querySelector(selector || ".obfuscate");
+        const obfu = new Obfuscator(el, obfuParams);
 
-        setTimeout(obfu.obfuscate, this.obfuParams.delay);
+        setTimeout(obfu.obfuscate, obfuParams.delay);
     })
 }
