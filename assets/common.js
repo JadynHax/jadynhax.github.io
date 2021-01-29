@@ -16,7 +16,7 @@ function closePageSource() {
     document.querySelector("#source-view-bkg").style.pointerEvents = "none";
 }
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
     document.body.innerHTML += `
         <div id="source-view-bkg">
             <div id="source-view">
@@ -40,5 +40,4 @@ window.onload = function() {
     document.querySelector("#source-view-bkg").onclick = function(){closePageSource()}
     document.querySelector("#source-view").onclick = function(){setTimeout(openPageSource, 1)}
     document.querySelector("#close-source").onclick = function(){setTimeout(closePageSource, 2)}
-    window.onload = undefined
-};
+});
