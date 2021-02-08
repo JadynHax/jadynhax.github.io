@@ -165,6 +165,7 @@ body:last-child {
     background-color: var(--dark-accent);
     overflow: hidden;
     top: 0;
+    z-index: 1;
 
     position: -webkit-sticky;
     position:         sticky;
