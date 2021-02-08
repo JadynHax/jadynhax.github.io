@@ -121,7 +121,7 @@ body:last-child {
 }
 
 .page-content {
-    margin: 0 1rem;
+    margin: 0.75rem 1rem;
     padding: 1rem 0;
 }
 
@@ -348,6 +348,24 @@ body:last-child {
     color: var(--off-white);
     padding: 0.5625rem 0.625rem;
     cursor: pointer;
+}
+
+/* Styling to fade in elements on load */
+.fade-in-done {
+    visibility: visible;
+    position: relative;
+    opacity: 1;
+    top: 0;
+
+    -webkit-transition: opacity 1.5s, top 1.5s;
+         -o-transition: opacity 1.5s, top 1.5s;
+            transition: opacity 1.5s, top 1.5s;
+}
+
+.fade-in {
+    visibility: hidden;
+    opacity: 0;
+    top: 100px;
 }
 
 /* Grid styling */ 
