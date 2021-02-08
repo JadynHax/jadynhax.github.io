@@ -41,3 +41,16 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#source-view").onclick = function(){setTimeout(openPageSource, 1)}
     document.querySelector("#close-source").onclick = function(){setTimeout(closePageSource, 2)}
 });
+
+$(function(){
+    const timeBetween = 200;
+    var timing = 500;
+
+    $('.fade-in').each(function(){
+        const element = $(this);
+
+        setTimeout(function(){element.removeClass('fade-in').addClass('fade-in-done')}, timing);
+
+        timing += timeBetween;
+    });
+});
