@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024" width="1024" height="1024">
+	<defs>
+		<path d="M802.02 518.73C839.42 518.73 869.74 549.05 869.74 586.45C869.74 628 869.74 684.93 869.74 726.48C869.74 763.88 839.42 794.2 802.02 794.2C672.47 794.2 351.53 794.2 221.98 794.2C184.58 794.2 154.27 763.88 154.27 726.48C154.27 684.93 154.27 628 154.27 586.45C154.27 549.05 184.58 518.73 221.98 518.73C351.53 518.73 672.47 518.73 802.02 518.73Z" id="g1KB18tnR1"></path>
+		<path d="M512 372.68L512 270.62L512 372.68Z" id="a209qUWMBp"></path>
+		<path d="M591.31 191.31C591.31 235.09 555.77 270.62 512 270.62C468.23 270.62 432.69 235.09 432.69 191.31C432.69 147.54 468.23 112 512 112C555.77 112 591.31 147.54 591.31 191.31Z" id="iPVANHGio"></path>
+		<path d="M720.24 372.68C754.16 372.68 781.66 400.18 781.66 434.1C781.66 529.68 781.66 755 781.66 850.58C781.66 884.5 754.16 912 720.24 912C624.66 912 399.34 912 303.76 912C269.84 912 242.34 884.5 242.34 850.58C242.34 755 242.34 529.68 242.34 434.1C242.34 400.18 269.84 372.68 303.76 372.68C399.34 372.68 624.66 372.68 720.24 372.68Z" id="a4FgXZCMM3"></path>
+		<path d="M459.9 546.46C459.9 580.13 432.56 607.47 398.89 607.47C365.22 607.47 337.88 580.13 337.88 546.46C337.88 512.79 365.22 485.45 398.89 485.45C432.56 485.45 459.9 512.79 459.9 546.46Z" id="aAZ7EFkY8"></path>
+		<path d="M684.64 546.46C684.64 580.13 657.3 607.47 623.63 607.47C589.96 607.47 562.62 580.13 562.62 546.46C562.62 512.79 589.96 485.45 623.63 485.45C657.3 485.45 684.64 512.79 684.64 546.46Z" id="b1T4p3t6yV"></path>
+		<path d="M637.51 707.3C668.07 707.3 692.84 732.08 692.84 762.64C692.84 777.82 692.84 768.05 692.84 783.23C692.84 813.79 668.07 838.57 637.51 838.57C575.37 838.57 444.27 838.57 382.12 838.57C351.56 838.57 326.79 813.79 326.79 783.23C326.79 768.05 326.79 777.82 326.79 762.64C326.79 732.08 351.56 707.3 382.12 707.3C444.27 707.3 575.37 707.3 637.51 707.3Z" id="bB00AoAWu"></path>
+		<path d="M406.29 838.57L406.29 707.3L406.29 838.57Z" id="b6sDcTUgAD"></path>
+		<path d="M477.58 838.57L477.58 707.3L477.58 838.57Z" id="b3mfFjCxPg"></path>
+		<path d="M547.01 838.57L547.01 707.3L547.01 838.57Z" id="e2kdpyHlb"></path>
+		<path d="M616.45 838.57L616.45 707.3L616.45 838.57Z" id="apN1Vseet"></path>
+	</defs>
+	<g>
+		<g>
+			<g>
+				<g>
+					<use xlink:href="#g1KB18tnR1" opacity="1" fill="#666766" fill-opacity="1"></use>
+					<g>
+						<use xlink:href="#g1KB18tnR1" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="30" stroke-opacity="1"></use>
+					</g>
+				</g>
+				<g>
+					<g>
+						<use xlink:href="#a209qUWMBp" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="30" stroke-opacity="1"></use>
+					</g>
+				</g>
+				<g>
+					<use xlink:href="#iPVANHGio" opacity="1" fill="#e15c64" fill-opacity="1"></use>
+					<g>
+						<use xlink:href="#iPVANHGio" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="30" stroke-opacity="1"></use>
+					</g>
+				</g>
+				<g>
+					<use xlink:href="#a4FgXZCMM3" opacity="1" fill="#b9bbbe" fill-opacity="1"></use>
+					<g>
+						<use xlink:href="#a4FgXZCMM3" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="34" stroke-opacity="1"></use>
+					</g>
+				</g>
+			</g>
+			<g>
+				<g>
+					<use xlink:href="#aAZ7EFkY8" opacity="1" fill="#acbd81" fill-opacity="1"></use>
+					<g>
+						<use xlink:href="#aAZ7EFkY8" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="30" stroke-opacity="1"></use>
+					</g>
+				</g>
+				<g>
+					<use xlink:href="#b1T4p3t6yV" opacity="1" fill="#acbd81" fill-opacity="1"></use>
+					<g>
+						<use xlink:href="#b1T4p3t6yV" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="30" stroke-opacity="1"></use>
+					</g>
+				</g>
+			</g>
+			<g>
+				<g>
+					<use xlink:href="#bB00AoAWu" opacity="1" fill="#ffffff" fill-opacity="1"></use>
+					<g>
+						<use xlink:href="#bB00AoAWu" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="30" stroke-opacity="1"></use>
+					</g>
+				</g>
+				<g>
+					<g>
+						<use xlink:href="#b6sDcTUgAD" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="30" stroke-opacity="1"></use>
+					</g>
+				</g>
+				<g>
+					<g>
+						<use xlink:href="#b3mfFjCxPg" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="30" stroke-opacity="1"></use>
+					</g>
+				</g>
+				<g>
+					<g>
+						<use xlink:href="#e2kdpyHlb" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="30" stroke-opacity="1"></use>
+					</g>
+				</g>
+				<g>
+					<g>
+						<use xlink:href="#apN1Vseet" opacity="1" fill-opacity="0" stroke="#333333" stroke-width="30" stroke-opacity="1"></use>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
