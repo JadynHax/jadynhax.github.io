@@ -1,5 +1,5 @@
 /*
-Potential colors to use if in need of variety
+Potential colors to use if in need of variety:
 #5f2fed
 #4310de
 #3713a1
@@ -7,8 +7,9 @@ Potential colors to use if in need of variety
 #470aff
 */
 
-/* Root variable definitions */
+/* Custom Property Definitions */
 :root {
+    /* Color Variables */
     --off-white: #fcfcfc;
     --off-black: #030303;
 
@@ -369,12 +370,12 @@ body:last-child {
     top: 100px;
 }
 
-/* Grid styling */ 
+/* Grid styling */
 .card-grid {
     display: grid;
     grid-gap: 0.5rem;
     grid: 250px / auto auto auto;
-    
+
 }
 
 .card-grid > .card-grid-item {
