@@ -44,43 +44,7 @@
             document.addEventListener("DOMContentLoaded", function(){
                 $('#navbar').load('/ecs/navbar.html');
             });
-
-            $(function(){
-                const timeBetween = 150;
-                var timing = 200;
-
-                $('.fade-in').each(function(){
-                    const element = $(this);
-
-                    setTimeout(function(){element.removeClass('fade-in').addClass('fade-in-done')}, timing);
-
-                    timing += timeBetween;
-                });
-            });
         </script>
-        <style>
-            .fade-in-done {
-                visibility: visible;
-                position: relative;
-                opacity: 1;
-                top: 0;
-
-                -webkit-transition: opacity 1.5s, top 1.5s;
-                     -o-transition: opacity 1.5s, top 1.5s;
-                        transition: opacity 1.5s, top 1.5s;
-            }
-
-            .fade-in {
-                visibility: hidden;
-                opacity: 0;
-                top: 100px;
-            }
-            
-            .page-content {
-                margin-top: 0.75rem;
-                margin-bottom: 0.75rem;
-            }
-        </style>
     </head>
     <body>
         <div id="navbar" class="navbar"></div>
