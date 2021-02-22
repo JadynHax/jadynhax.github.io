@@ -1,0 +1,13 @@
+{
+  "dirs":[
+    "assn-1",
+    "assn-2",
+    "assn-3",
+    "pc-building-assignment"
+  ],
+  "files":[
+    "assn-card-template.html",
+    "index.html",
+    "index.json"
+  ]
+}

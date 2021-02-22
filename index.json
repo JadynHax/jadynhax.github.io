@@ -1,0 +1,20 @@
+{
+  "dirs":[
+    "404",
+    "assets",
+    "ecs",
+    "experiments",
+    "resume",
+    "site-testing"
+  ],
+  "files":[
+    "_config.yml",
+    "404.html",
+    "index.html",
+    "index.json",
+    "LICENSE",
+    "navbar.html",
+    "README.md",
+    "template.html"
+  ]
+}

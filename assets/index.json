@@ -1,0 +1,13 @@
+{
+  "dirs":[
+    "favicons",
+    "fonts",
+    "highlight",
+    "img",
+    "js",
+    "style"
+  ],
+  "files":[
+    "index.json"
+  ]
+}
