@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <button id="view-source"><i class="fas fa-file-code"></i> View Source</button>`
 
     fetch(window.location.pathname)
-      .then(response => response.text())
+      .then((response) => response.text())
       .then((data) => {$("#source-view > pre > code").text(data)})
       .then(function(){hljs.initHighlighting()});
 
@@ -54,3 +54,16 @@ $(function(){
         timing += timeBetween;
     });
 });
+
+
+// Finish this later
+
+fs = {
+    ls: function(path) {
+      if (path.endsWith("/")) {
+        path = path.slice(0, -1);
+      }
+
+      var contents = $.getJSON(path+"/index.json");
+    }
+}
