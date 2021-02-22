@@ -47,6 +47,14 @@
                 $('#navbar').load('/navbar.html')
             });
         </script>
+
+        <!-- Additional Stuff -->
+        <style>
+            #obfuscator-container:hover {
+                cursor: pointer;
+                
+            }
+        </style>
     </head>
     <body>
         <div id="navbar" class="navbar"></div>
@@ -62,7 +70,7 @@
             <p>So my first experiment is something I call a text obfuscator display. Basically, it makes text in an HTML element go all scrambly and changes it to something else based on what you've specified.</p>
             <p>I've made a testing section below!</p>
 
-            <section class="page-content mid-light-accent fade-in">
+            <section id="obfuscator-container" class="page-content mid-light-accent fade-in">
                 <p id="obfuscate">Click on me to test the obfuscator!</p>
                 <script type="text/javascript">
                     var obfuData = {
@@ -86,7 +94,7 @@
                             "Click the button below to test the obfuscator!",
                         ]
                     }
-                    document.querySelector("#obfuscate").addEventListener("click", function(){obfuscate(obfuData, '#obfuscate')});
+                    document.querySelector("#obfuscator-container").addEventListener("click", function(){obfuscate(obfuData, "#obfuscate")});
                 </script>
             </section>
         </section>
