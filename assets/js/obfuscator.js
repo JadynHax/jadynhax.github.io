@@ -128,7 +128,7 @@ class Obfuscator {
     }
 }
 
-function obfuscate(obfuParams, selector) {
+function obfuscateOnLoad(obfuParams, selector) {
     for (item of [["delay", 0], ["startTime", 40], ["endTime", 60], ["dispTime", 1750], ["loop", false], ["chars", "0123456789!<>-_\\/[]{}—=+*^?#"], ["speed", 0.3], ["accelFactor", 0.5]]) {
         if (obfuParams[item[0]] === undefined) {
             obfuParams[item[0]] = item[1];
@@ -142,5 +142,20 @@ function obfuscate(obfuParams, selector) {
 
            obfu.obfuscate();
         }, obfuParams.delay, obfuParams, selector);
-    })
+    });
+}
+
+function obfuscate(obfuParams, selector) {
+    for (item of [["delay", 0], ["startTime", 40], ["endTime", 60], ["dispTime", 1750], ["loop", false], ["chars", "0123456789!<>-_\\/[]{}—=+*^?#"], ["speed", 0.3], ["accelFactor", 0.5]]) {
+        if (obfuParams[item[0]] === undefined) {
+            obfuParams[item[0]] = item[1];
+        }
+    }
+
+    setTimeout(function(obfuParams, selector){
+        const el = document.querySelector(selector || ".obfuscate");
+        const obfu = new Obfuscator(el, obfuParams);
+
+       obfu.obfuscate();
+    }, obfuParams.delay, obfuParams, selector);
 }
