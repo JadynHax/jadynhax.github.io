@@ -128,13 +128,13 @@ class Obfuscator {
     }
 }
 
-function obfuscateOnLoad(obfuParams, selector) {
+function obfuscateOnLoad(obfuParams, selector=".obfuscate") {
     for (item of [["delay", 0], ["startTime", 40], ["endTime", 60], ["dispTime", 1750], ["loop", false], ["chars", "0123456789!<>-_\\/[]{}—=+*^?#"], ["speed", 0.3], ["accelFactor", 0.5]]) {
         if (obfuParams[item[0]] === undefined) {
             obfuParams[item[0]] = item[1];
         }
     }
-    
+
     document.addEventListener("DOMContentLoaded", function(){
         setTimeout(function(obfuParams, selector){
             const el = document.querySelector(selector || ".obfuscate");
@@ -145,7 +145,7 @@ function obfuscateOnLoad(obfuParams, selector) {
     });
 }
 
-function obfuscate(obfuParams, selector) {
+function obfuscate(obfuParams, selector=".obfuscate") {
     for (item of [["delay", 0], ["startTime", 40], ["endTime", 60], ["dispTime", 1750], ["loop", false], ["chars", "0123456789!<>-_\\/[]{}—=+*^?#"], ["speed", 0.3], ["accelFactor", 0.5]]) {
         if (obfuParams[item[0]] === undefined) {
             obfuParams[item[0]] = item[1];
