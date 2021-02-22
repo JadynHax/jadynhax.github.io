@@ -69,5 +69,14 @@ const fs = {
     listdir: this.ls,
     read: function(path) {
         return $.get(path).text();
+    },
+    getData: function(path) {
+        var data = {};
+
+        if (path.endsWith(".html")) {
+            var content = this.read(path);
+            
+            /<title>(.*?)<\/title>/i
+        }
     }
 }
