@@ -63,7 +63,7 @@
             <p>I've made a testing section below!</p>
 
             <section class="page-content mid-light-accent fade-in">
-                <p class="obfuscate">Click the button below to test the obfuscator!</p>
+                <p id="obfuscate">Click on me to test the obfuscator!</p>
                 <script type="text/javascript">
                     var obfuData = {
                         "delay":500,
@@ -86,8 +86,8 @@
                             "Click the button below to test the obfuscator!",
                         ]
                     }
+                    document.querySelector("#obfuscate").addEventListener("click", function(){obfuscate(obfuData, '#obfuscate')});
                 </script>
-                <button type="button" onclick="obfuscate(obfuData, '.obfuscate');">Click me!</button>
             </section>
         </section>
     </body>
