@@ -58,12 +58,16 @@ $(function(){
 
 // Finish this later
 
-fs = {
+const fs = {
     ls: function(path) {
-      if (path.endsWith("/")) {
-        path = path.slice(0, -1);
-      }
+        if (path.endsWith("/")) {
+            path = path.slice(0, -1);
+        }
 
-      var contents = $.getJSON(path+"/index.json");
+        return $.getJSON(path+"/index.json");
+    },
+    listdir: this.ls,
+    read: function(path) {
+        return $.get(path).text();
     }
 }
