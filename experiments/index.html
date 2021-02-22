@@ -1,11 +1,15 @@
 <!doctype html>
 <html>
     <head>
-        <title>Placeholder Experiment Hub | JaonHax's Website</title>
-        <meta name="application-name" content="Placeholder Experiment Hub | JaonHax's Website" />
-        <meta property="og:title" content="Placeholder Experiment Hub | JaonHax's Website" />
-        <meta name="description" content="A placeholder hub for JaonHax's HTML/CSS/JavaScript experiments." />
-        <meta property="og:description" content="A placeholder hub for JaonHax's HTML/CSS/JavaScript experiments." />
+        <!-- Stuff that changes -->
+        <title>Experiment Hub | JaonHax's Website</title>
+        <meta name="application-name" content="Experiment Hub | JaonHax's Website" />
+        <meta property="og:title" content="Experiment Hub | JaonHax's Website" />
+        <meta name="description" content="The hub for JaonHax's experiments with HTML, CSS, and JavaScript." />
+        <meta property="og:description" content="The hub for JaonHax's experiments with HTML, CSS, and JavaScript." />
+        <meta property="og:url" content="https://jaonhax.github.io/experiments/" />
+
+        <!-- Stuff that doesn't change -->
         <base href="https://jaonhax.github.io/" />
         <link rel="stylesheet" href="/assets/style/main.css" />
         <link rel="stylesheet" href="/assets/style/font.css" />
@@ -38,9 +42,53 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="/assets/js/common.js"></script>
         <script src="/assets/js/obfuscator.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                $('#navbar').load('/navbar.html')
+            });
+        </script>
     </head>
     <body>
-        <h1>PLACEHOLDER</h1>
-        <p>This page has no content yet. I'm still developing this site into something I can be proud of lol</p>
+        <div id="navbar" class="navbar"></div>
+        <header class="page-head fade-in">
+            <h1><div>Experiment Hub</div></h1>
+        </header>
+        <section class="page-content mid-dark-accent fade-in">
+            <p>Hey there!</p>
+            <p>Welcome to my <b>Experiment Hub</b>! I'm Jason (aka JaonHax when I'm online), and I really enjoy messing around with computer stuff until it does something cool.</p>
+        </section>
+        <section class="page-content mid-accent fade-in">
+            <h1><a href="/experiments/obfuscator/">Experiment 1—Text Obfuscator Display</a></h1>
+            <p>So my first experiment is something I call a text obfuscator display. Basically, it makes text in an HTML element go all scrambly and changes it to something else based on what you've specified.</p>
+            <p>I've made a testing section below!</p>
+
+            <section class="page-content mid-light-accent fade-in">
+                <p class="obfuscate">Click the button below to test the obfuscator!</p>
+                <script type="text/javascript">
+                    var obfuData = {
+                        "delay":500,
+                        "startTime":40,
+                        "endTime":60,
+                        "dispTime":1750,
+                        "loop":false,
+                        "chars":"0123456789!<>-_\\/[]{}—=+*^?#",
+                        "phrases":[
+                            "See?",
+                            "Isn't this cool?",
+                            "I make stuff like this",
+                            "pretty often.",
+                            "I don't know why.",
+                            "I just like it,",
+                            "I guess.",
+                            "Thank you for",
+                            "taking a look around!",
+                            "Goodbye!",
+                            "Click the button below to test the obfuscator!",
+                        ]
+                    }
+                </script>
+                <button type="button" onclick="obfuscate(obfuData, '.obfuscate');">Click me!</button>
+            </section>
+        </section>
     </body>
 </html>
