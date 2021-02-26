@@ -78,14 +78,14 @@
             <p>I've made a testing section below!</p>
 
             <section id="obfuscator-container" class="page-content mid-light-accent fade-in">
-                <p id="obfuscate">Click on me to test the obfuscator!</p>
+                <p id="obfuscate">This is an example of the obfuscator!</p>
                 <script type="text/javascript">
                     var obfuData = {
                         "delay":500,
                         "startTime":40,
                         "endTime":60,
                         "dispTime":1750,
-                        "loop":false,
+                        "loop":true,
                         "chars":"0123456789!<>-_\\/[]{}—=+*^?#",
                         "phrases":[
                             "See?",
@@ -98,10 +98,10 @@
                             "Thank you for",
                             "taking a look around!",
                             "Goodbye!",
-                            "Click the button below to test the obfuscator!",
+                            "This is an example of the obfuscator!",
                         ]
                     }
-                    document.querySelector("#obfuscator-container").addEventListener("click", function(){obfuscate(obfuData, "#obfuscate")});
+                    obfuscateOnLoad(obfuData, "#obfuscate");
                 </script>
             </section>
         </section>
