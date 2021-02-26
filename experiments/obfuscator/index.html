@@ -44,8 +44,8 @@
         <script src="/assets/js/obfuscator.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function(){
+                $.get('/assets/js/obfuscator.js').then((response) => $('#code-block').text(response));
                 $('#navbar').load('/navbar.html');
-                $('#code-block').load('/assets/js/obfuscator.js');
             });
         </script>
     </head>
