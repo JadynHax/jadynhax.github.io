@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch(window.location.pathname)
       .then((response) => response.text())
       .then((data) => {$("#source-view > pre > code").text(data)})
-      .then(function(){hljs.initHighlighting()});
+      .then(function(){setTimeout(hljs.initHighlighting, 1000)});
 
     document.querySelector("#view-source").onclick = function(){openPageSource()}
     document.querySelector("#source-view-bkg").onclick = function(){closePageSource()}
