@@ -8,7 +8,6 @@
     "site-testing"
   ],
   "files":[
-    "_config.yml",
     "404.html",
     "index.html",
     "index.json",
