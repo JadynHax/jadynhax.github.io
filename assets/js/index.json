@@ -2,6 +2,7 @@
   "dirs":[],
   "files":[
     "common.js",
+    "filesystem.js",
     "index.json",
     "obfuscator.js"
   ]
