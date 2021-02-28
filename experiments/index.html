@@ -43,6 +43,11 @@
         <script src="/assets/js/common.js" type="module"></script>
         <script src="/assets/js/obfuscator.js" type="module"></script>
         <script src="/assets/js/filesystem.js" type="module"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                $('#navbar').load('/navbar.html');
+            });
+        </script>
     </head>
     <body>
         <div id="navbar" class="navbar"></div>
