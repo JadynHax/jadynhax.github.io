@@ -81,5 +81,3 @@ $(function(){
         timing += timeBetween;
     });
 });
-
-export {htmlEncode, htmlDecode, openPageSource, closePageSource, dedent}
