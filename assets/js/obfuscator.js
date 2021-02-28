@@ -159,3 +159,5 @@ function obfuscate(obfuParams, selector=".obfuscate") {
        obfu.obfuscate();
     }, obfuParams.delay, obfuParams, selector);
 }
+
+export {Obfuscator as default, obfuscateOnLoad, obfuscate};
