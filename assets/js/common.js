@@ -16,6 +16,26 @@ function closePageSource() {
     document.querySelector("#source-view-bkg").style.pointerEvents = "none";
 }
 
+function dedent(string) {
+    var newLines = [];
+    var lines = string.split("\n");
+    var indent = 999999999999;
+
+    for (var line of lines) {
+        if (line !== "") {
+            var indentString = /^([ ]*)[^ ]/.exec(line)[1];
+
+            if (indentString.length < indent) {
+                indent = indentString.length;
+            }
+        }
+    }
+
+    lines.forEach((line) => newLines.push(line.slice(indent)));
+
+    return newLines.join("\n");
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     document.body.innerHTML += `
         <div id="source-view-bkg">
@@ -54,3 +74,5 @@ $(function(){
         timing += timeBetween;
     });
 });
+
+export {htmlEncode, htmlDecode, openPageSource, closePageSource, dedent}
