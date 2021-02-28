@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <span class="fas fa-times"></span>
                 </div>
                 <h1>Page Source</h1>
-                <pre class="html"><code>
+                <pre class="html dark"><code>
                     <!-- Page source gets loaded here -->
                 </code></pre>
             </div>
