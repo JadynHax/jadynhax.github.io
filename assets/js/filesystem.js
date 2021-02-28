@@ -1,3 +1,5 @@
+import { dedent } from "/assets/js/common.js";
+
 const fileSystem = {
     makeAbsolute: function makeAbsolute(path) {
         path = posix.format(posix.parse(path));
