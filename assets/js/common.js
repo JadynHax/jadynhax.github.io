@@ -51,10 +51,17 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
         <button id="view-source"><i class="fas fa-file-code"></i> View Source</button>`
 
-    fetch(window.location.pathname)
-      .then((response) => response.text())
-      .then((data) => {$("#source-view > pre > code").text(data)})
-      .then(function(){setTimeout(hljs.initHighlighting, 1000)});
+    try {
+        fetch(window.location.pathname)
+            .then((response) => response.text())
+            .then((data) => {$("#source-view > pre > code").text(data)})
+            .then(function(){setTimeout(hljs.initHighlighting, 1000)});
+    } catch(err) {
+        fetch("/404.html")
+            .then((response) => response.text())
+            .then((data) => {$("#source-view > pre > code").text(data)})
+            .then(function(){setTimeout(hljs.initHighlighting, 1000)});
+    }
 
     document.querySelector("#view-source").onclick = function(){openPageSource()}
     document.querySelector("#source-view-bkg").onclick = function(){closePageSource()}
