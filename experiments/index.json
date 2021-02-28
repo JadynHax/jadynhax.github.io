@@ -1,5 +1,7 @@
 {
-  "dirs":[],
+  "dirs":[
+    "obfuscator"
+  ],
   "files":[
     "index.html",
     "index.json"
