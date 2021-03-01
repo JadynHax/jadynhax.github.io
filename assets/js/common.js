@@ -70,14 +70,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 $(function(){
-    const timeBetween = 200;
-    var timing = 500;
+    setTimeout(function(){
+        const timeBetween = 200;
+        var timing = 0;
 
-    $('.fade-in').each(function(){
-        const element = $(this);
+        $('.fade-in').each(function(){
+            const element = $(this);
 
-        setTimeout(function(){element.removeClass('fade-in').addClass('fade-in-done')}, timing);
+            setTimeout(function(){element.removeClass('fade-in').addClass('fade-in-done')}, timing);
 
-        timing += timeBetween;
-    });
+            timing += timeBetween;
+        });
+    }, 500);
 });
