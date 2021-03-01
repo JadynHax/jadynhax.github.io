@@ -53,10 +53,11 @@
                 const insertionSection = document.querySelectorAll(".page-content")[document.querySelectorAll(".page-content").length-1];
                 
                 for (var column of [1, 2]) {
-                    var insertionElement = document.createElement("div");
+                    const insertionElement = document.createElement("div");
+                    insertionElement.style.all = "none";
 
                     for (var assignment of data.dirs.slice(Math.floor((column - 1) * data.dirs.length / 2), Math.floor(column * data.dirs.length / 2))) {
-                        var section = document.createElement("section");
+                        const section = document.createElement("section");
                         var assnData = await fileSystem.getData(posix.join(fileSystem.cwd, assignment, "index.html"));
 
                         section.classList.add("page-content", "mid-accent", "fade-in");
