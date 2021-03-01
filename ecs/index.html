@@ -55,7 +55,7 @@
                 for (var column of [1, 2]) {
                     const insertionElement = document.createElement("div");
                     insertionElement.style.all = "initial";
-                    insertionElement.style.width = "50%";
+                    insertionElement.style.width = "49%";
 
                     for (var assignment of data.dirs.slice(Math.floor((column - 1) * data.dirs.length / 2), Math.floor(column * data.dirs.length / 2))) {
                         const section = document.createElement("section");
@@ -125,6 +125,6 @@
         <section class="page-content fade-in">
             <h1>The Assignments</h1>
         </section>
-        <section class="page-content" style="display: flex; flex-direction: column;"></section>
+        <section class="page-content" style="display: flex; flex-direction: column; align-items: center;"></section>
     </body>
 </html>
