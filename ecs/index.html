@@ -50,6 +50,7 @@
                     var data = await fileSystem.getData(posix.join(fileSystem.cwd, assignment, "index.html"));
 
                     section.classList.add("page-content", "mid-accent", "fade-in");
+                    section.style.breakInside = "avoid";
                     section.appendChild(document.createElement("h2"));
                     section.children[0].appendChild(document.createElement("a"));
                     section.children[0].children[0].href = posix.join(fileSystem.cwd, assignment);
@@ -57,7 +58,7 @@
                     section.appendChild(document.createElement("p"));
                     section.children[1].innerText = data.description;
 
-                    document.body.appendChild(section);
+                    document.body.children[document.body.children.length-1].appendChild(section);
                 }
 
                 const timeBetween = 200;
@@ -113,5 +114,6 @@
         <section class="page-content fade-in">
             <h1>The Assignments</h1>
         </section>
+        <section class="page-content" style="column-count: 2"></section>
     </body>
 </html>
