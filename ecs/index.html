@@ -44,6 +44,10 @@
         <script src="/assets/js/obfuscator.js"></script>
         <script src="/assets/js/filesystem.js"></script>
         <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                $('#navbar').load('/navbar.html');
+            });
+
             fileSystem.ls("/ecs/").then(async function(data) {
                 const insertionSection = document.querySelectorAll(".page-content")[document.querySelectorAll(".page-content").length-1];
 
@@ -73,10 +77,6 @@
 
                     timing += timeBetween;
                 });
-            });
-
-            document.addEventListener("DOMContentLoaded", function(){
-                $('#navbar').load('/navbar.html');
             });
         </script>
     </head>
