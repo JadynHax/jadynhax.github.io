@@ -50,21 +50,27 @@
 
             fileSystem.ls("/ecs/").then(async function(data) {
                 const insertionSection = document.querySelectorAll(".page-content")[document.querySelectorAll(".page-content").length-1];
+                
+                for (var column of [1, 2]) {
+                    var insertionElement = document.createElement("div");
 
-                for (var assignment of data.dirs) {
-                    var section = document.createElement("section");
-                    var data = await fileSystem.getData(posix.join(fileSystem.cwd, assignment, "index.html"));
+                    for (var assignment of data.dirs.slice(Math.floor((column - 1) * data.dirs.length / 2), Math.floor(column * data.dirs.length / 2))) {
+                        var section = document.createElement("section");
+                        var data = await fileSystem.getData(posix.join(fileSystem.cwd, assignment, "index.html"));
 
-                    section.classList.add("page-content", "mid-accent", "fade-in");
-                    section.style.breakInside = "avoid-column";
-                    section.appendChild(document.createElement("h2"));
-                    section.children[0].appendChild(document.createElement("a"));
-                    section.children[0].children[0].href = posix.join(fileSystem.cwd, assignment);
-                    section.children[0].children[0].innerText = data.title.replace(" | JaonHax's Website", "");
-                    section.appendChild(document.createElement("p"));
-                    section.children[1].innerText = data.description;
+                        section.classList.add("page-content", "mid-accent", "fade-in");
+                        section.style.breakInside = "avoid-column";
+                        section.appendChild(document.createElement("h2"));
+                        section.children[0].appendChild(document.createElement("a"));
+                        section.children[0].children[0].href = posix.join(fileSystem.cwd, assignment);
+                        section.children[0].children[0].innerText = data.title.replace(" | JaonHax's Website", "");
+                        section.appendChild(document.createElement("p"));
+                        section.children[1].innerText = data.description;
 
-                    insertionSection.appendChild(section);
+                        insertionElement.appendChild(section);
+                    }
+
+                    insertionSection.appendChild(insertionElement);
                 }
 
                 const timeBetween = 200;
