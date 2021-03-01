@@ -36,7 +36,7 @@ const fileSystem = {
             var title = null, description = null, head = null, body = null;
 
             try { title =       /\s*<title>(.*?)<\/title>/is.exec(data.contents)[1]                                 } catch(err) {}
-            try { description = /\s*<meta\s+name="description"\s+content="(.*?)"\s*\/>/is.exec(data.contents)[1]    } catch(err) {}
+            try { description = /\s*<meta\s+name="description"\s+content="(.*?)"\s*\/?>/is.exec(data.contents)[1]    } catch(err) {}
             try { head =        dedent(/\s*<head>\n?(.*?)\n?\s*<\/head>/is.exec(data.contents)[1])                  } catch(err) {}
             try { body =        dedent(/\s*<body>\n?(.*?)\n?\s*<\/body>/is.exec(data.contents)[1])                  } catch(err) {}
 
