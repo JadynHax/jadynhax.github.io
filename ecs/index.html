@@ -59,6 +59,16 @@
 
                     document.body.appendChild(section);
                 }
+
+                const timeBetween = 200;
+                var timing = 0;
+
+                $('.fade-in,.fade-in-done').each(function(){
+                    const element = $(this);
+
+                    setTimeout(function(){element.removeClass('fade-in').addClass('fade-in-done')}, timing);
+
+                    timing += timeBetween;
             });
 
             document.addEventListener("DOMContentLoaded", function(){
