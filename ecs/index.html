@@ -45,6 +45,8 @@
         <script src="/assets/js/filesystem.js"></script>
         <script>
             fileSystem.ls("/ecs/").then(async function(data) {
+                const insertionSection = document.querySelectorAll(".page-content")[document.querySelectorAll(".page-content").length-1];
+
                 for (var assignment of data.dirs) {
                     var section = document.createElement("section");
                     var data = await fileSystem.getData(posix.join(fileSystem.cwd, assignment, "index.html"));
@@ -58,7 +60,7 @@
                     section.appendChild(document.createElement("p"));
                     section.children[1].innerText = data.description;
 
-                    document.body.children[document.body.children.length-1].appendChild(section);
+                    insertionSection.appendChild(section);
                 }
 
                 const timeBetween = 200;
@@ -114,6 +116,6 @@
         <section class="page-content fade-in">
             <h1>The Assignments</h1>
         </section>
-        <section class="page-content" style="column-count: 2"></section>
+        <section class="page-content fade-in" style="column-count: 2"></section>
     </body>
 </html>
