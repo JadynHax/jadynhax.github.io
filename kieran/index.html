@@ -48,7 +48,7 @@
                 $('#navbar').load('/navbar.html');
                 var d = new Date();
                 
-                if (d.getMonth() != 4 || d.getDay() != 23) {
+                if (d.getMonth() != 4 || d.getDate() != 23) {
                     for (element of document.querySelectorAll("*")) {
                         element.style.display = "none";
                     }
