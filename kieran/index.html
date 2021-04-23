@@ -44,62 +44,36 @@
         <script src="/assets/js/obfuscator.js"></script>
         <script src="/assets/js/filesystem.js"></script>
         <script>
-            function formatTickerNumber(n) {
-                n = Math.round(n).toString();
-
-                return "0".repeat(2 - n.length) + n;
-            }
-
-            function tickerUpdate() {
-                var currentDate = new Date();
-                var kieranBdate;
-                
-                if (currentDate.getMonth() < 3 || (currentDate.getMonth() == 3 && currentDate.getDate() < 23)) {
-                    kieranBdate = new Date(currentDate.getYear(), 3, 23);
-                } else {
-                    kieranBdate = new Date(currentDate.getYear() + 1, 3, 23);
-                }
-                
-                var diffDate = new Date(kieranBdate.getTime() - currentDate.getTime())
-
-                document.querySelector("#ticker-mo").innerHTML = formatTickerNumber(diffDate.getMonth());
-                document.querySelector("#ticker-d").innerHTML = formatTickerNumber(diffDate.getDate());
-                document.querySelector("#ticker-h").innerHTML = formatTickerNumber(diffDate.getHours());
-                document.querySelector("#ticker-mi").innerHTML = formatTickerNumber(diffDate.getMinutes());
-                document.querySelector("#ticker-s").innerHTML = formatTickerNumber(diffDate.getSeconds());
-            }
-
             document.addEventListener("DOMContentLoaded", function(){
                 $('#navbar').load('/navbar.html');
                 var d = new Date();
 
                 if (d.getMonth() != 3 || d.getDate() != 23) {
                     for (element of document.body.children) {
-                        if (!element.classList.contains("countdown")) {
+                        if (!element.classList.contains("cover")) {
                             element.style.display = "none";
                         }
                     }
                 } else {
-                    document.querySelector(".countdown").style.display = "none";
+                    document.querySelector(".cover").style.display = "none";
                 }
-
-                setInterval(tickerUpdate, 1000);
             });
         </script>
         <style>
-            .countdown {
-                text-align: center;
+            .cover {
+                padding-top: 40vh;
             }
-            
-            .ticker {
-                font-size: 150%;
+
+            .cover,
+            .cover * {
+                text-align: center;
             }
         </style>
     </head>
     <body>
         <div id="navbar" class="navbar"></div>
         <header class="page-head fade-in">
-            <h1>HAPPY BIRTHDAY, <span class="obfuscate">Kieran</span>!</h1>
+            <h1>Happy Birthday, <span class="obfuscate">Kieran</span>!</h1>
             <script type="text/javascript">
                 var obfuData = {
                     "delay":3000,
@@ -115,6 +89,7 @@
                         'my favorite man',
                         'babycakes',
                         'my boba bb',
+                        'my little koala',
                         'Kieran',
                     ]
                 }
@@ -123,17 +98,34 @@
         </header>
         <section class="page-content accent fade-in">
             <h1>About Kieran</h1>
-            <p>Kieran Palm is the greatest human being on this planet.</p>
+            <p>Kieran Palm is just about the greatest human being on this planet. He is kind, he is funny, he is creative, he is passionate, he is protective, and he is amazing for all of it.</p>
         </section>
-        <section class="countdown fade-in">
-            <h1>Time until opening:</h1>
-            <h1><span class="ticker" id="ticker-mo"></span> months, <span class="ticker" id="ticker-d"></span> days, <span class="ticker" id="ticker-h"></span>:<span class="ticker" id="ticker-mi"></span>:<span class="ticker" id="ticker-s"></span></h1>
+        <section class="page-content accent fade-in">
+            <h1>Things I Love Doing With Kieran</h1>
+            <ol>
+                <li>Playing <i>Dungeons &amp; Dragons</i></li>
+                <li>Creating character ideas</li>
+                <li>Talking with him</li>
+                <li>Staring into his eyes <strike>(God, they're so pretty)</strike></li>
+                <li>Showing him how much I love him</li>
+                <li>Hugging him</li>
+                <li>Cuddling him</li>
+                <li><strike>Fucking him</strike> Kissing him</li>
+            </ol>
         </section>
-        <!-- Uncomment the below to insert footer -->
-        <!-- <footer class="page-foot">
-            <p>
-                TEXT
-            </p>
-        </footer> -->
+        <section class="page-content accent fade-in">
+            <h1>Things I Could Do Without Kieran</h1>
+            <ol>
+                <li></li>
+            </ol>
+        </section>
+        <section class="page-content accent fade-in">
+            <h1>In Conclusion</h1>
+            <p>Kieran is the best mans on the face of the Earth, and the whole world is blessed that he made it another year. He is the light of my life and the one thing that truly matters to me above all else. I love you, Kieran. So much. And I always will, to the end of my days.</p>
+        </section>
+        <section class="cover fade-in">
+            <h1>Hold on just a minute now!</h1>
+            <h1>This page only open's on Kieran's birthday!</h1>
+        </section>
     </body>
 </html>
