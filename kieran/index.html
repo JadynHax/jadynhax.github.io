@@ -48,7 +48,7 @@
                 $('#navbar').load('/navbar.html');
                 var d = new Date();
 
-                if (d.getMonth() != 3 || d.getDate() != 23) {
+                if (d.getMonth() != 4 || d.getDate() != 23) {
                     for (element of document.body.children) {
                         if (!element.classList.contains("cover")) {
                             element.style.display = "none";
@@ -61,7 +61,7 @@
         </script>
         <style>
             .cover {
-                padding-top: 40vh;
+                padding-top: calc(50vh - 4em);
             }
 
             .cover,
@@ -124,8 +124,10 @@
             <p>Kieran is the best mans on the face of the Earth, and the whole world is blessed that he made it another year. He is the light of my life and the one thing that truly matters to me above all else. I love you, Kieran. So much. And I always will, to the end of my days.</p>
         </section>
         <section class="cover fade-in">
-            <h1>Hold on just a minute now!</h1>
-            <h1>This page only open's on Kieran's birthday!</h1>
+            <header class="page-head">
+                <h1 style="margin-bottom: initial; margin-top: 0;">Hold on just a minute now!</h1>
+            </header>
+            <h1>This page only opens on Kieran's birthday!</h1>
         </section>
     </body>
 </html>
