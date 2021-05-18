@@ -6,6 +6,7 @@
   ],
   "files":[
     "index.html",
-    "index.json"
+    "index.json",
+    "navbar.html"
   ]
 }
