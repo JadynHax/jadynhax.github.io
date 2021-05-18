@@ -159,7 +159,7 @@ body:last-child {
 }
 
 /* Navbar styling */
-#navbar {
+.navbar {
     --url-color: var(--off-white);
     --url-visited-color: var(--off-white);
 
@@ -172,7 +172,7 @@ body:last-child {
     position:         sticky;
 }
 
-#navbar a {
+.navbar a {
     font-family: 'Elianto', 'Oxanium', sans-serif;
     font-weight: bold;
     float: left;
@@ -185,8 +185,8 @@ body:last-child {
          -o-transition: background 0.25s, color 0.25s, padding 0.25s;
             transition: background 0.25s, color 0.25s, padding 0.25s;
 }
-#navbar a:hover,
-#navbar a:focus {
+.navbar a:hover,
+.navbar a:focus {
     background-color: var(--light-accent);
     padding: 1rem 1.25rem;
 }
