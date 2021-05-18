@@ -45,7 +45,7 @@
         <script src="/assets/js/filesystem.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function(){
-                $('#navbar').load('/navbar.html');
+                $('#navbar').load('/kieran/navbar.html');
                 var d = new Date();
 
                 if (d.getMonth() != 3 || d.getDate() != 23) {
@@ -61,7 +61,9 @@
         </script>
         <style>
             .cover {
-                padding-top: calc(50vh - 4em);
+                padding-top: calc(50vh - 5em - 1.8rem);
+                position: fixed;
+                top: calc(1em + 1.8rem);
             }
 
             .cover,
