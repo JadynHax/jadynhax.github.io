@@ -1,0 +1,11 @@
+
+{
+  "dirs":[
+    "info",
+    "birthday"
+  ],
+  "files":[
+    "index.html",
+    "index.json"
+  ]
+}
