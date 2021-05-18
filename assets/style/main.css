@@ -368,7 +368,7 @@ body:last-child {
     visibility: hidden;
     position: relative;
     opacity: 0;
-    top: 100px;
+    top: 100px!important;
 }
 
 /* Grid styling */
