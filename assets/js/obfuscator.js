@@ -18,7 +18,8 @@ class Obfuscator {
     constructor(el, params) {
         // Actual class attribute assignments
         this.el = el;
-        this.params = params
+        this.params = params;
+        this.params.chars = this.getCharArray(this.params.chars);
 
         this.update = this.update.bind(this);
         this.displayNext = this.displayNext.bind(this);
@@ -66,19 +67,10 @@ class Obfuscator {
         return promise;
     }
     getCharArray(string) {
-        var charArray = [];
-        if (string) {
+        if (typeof string === "string" && string) {
             // Treat HTML entities, tags, and symbols as a single character.
-            const charPattern = /(<.+?>)|(\&[a-z]+?;)|(\&#[0-9]+?;)|(\&#x[0-9a-f]+?;)|./gi
-            // Get match first so we can push to charArray as the first part of the loop.
-            var match = charPattern.exec(string);
-            do {
-                charArray.push(match[0]);
-                // Get next match so we can make sure it isn't null before we loop.
-                match = charPattern.exec(string);
-            } while (match != null);
+            return string.match(/(<[^>]+?>)|(\&[a-z]+?;)|(\&#[0-9]+?;)|(\&#x[0-9a-f]+?;)|./gi);
         }
-        return charArray
     }
     update() {
         let output = '';
