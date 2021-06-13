@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Stuff that changes -->
+        <title>Bookmarklets | JaonHax's Website</title>
+        <meta name="application-name" content="Bookmarklets | JaonHax's Website" />
+        <meta property="og:title" content="Bookmarklets | JaonHax's Website" />
+        <meta name="description" content="A collection of various bookmarklets I've made over the years." />
+        <meta property="og:description" content="A collection of various bookmarklets I've made over the years." />
+        <meta property="og:url" content="https://jaonhax.github.io/bookmarklets/" />
+
+        <!-- Stuff that doesn't change -->
+        <base href="https://jaonhax.github.io/" />
+        <link rel="stylesheet" href="/assets/style/main.css" />
+        <link rel="stylesheet" href="/assets/style/font.css" />
+        <link rel="stylesheet" href="/assets/style/atom-highlighting.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Flamenco&family=Nova+Flat&family=Nova+Round&family=Oxanium:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicons/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/favicons/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/favicons/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/favicons/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="/assets/favicons/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="/assets/favicons/favicon-128.png" sizes="128x128" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://jaonhax.github.io/assets/favicons/favicon-196x196.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="/assets/favicons/mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="/assets/favicons/mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="/assets/favicons/mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="/assets/favicons/mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="/assets/favicons/mstile-310x310.png" />
+        <script src="https://kit.fontawesome.com/d2300f412a.js" crossorigin="anonymous"></script>
+        <script src="/assets/highlight/highlight.pack.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="/assets/js/common.js"></script>
+        <script src="/assets/js/obfuscator.js"></script>
+        <script src="/assets/js/filesystem.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                $('#navbar').load('/navbar.html');
+            });
+        </script>
+    </head>
+    <body>
+        <div id="navbar" class="navbar"></div>
+        <header class="page-head fade-in">
+            <h1><div>Bookmarklets</div></h1>
+        </header>
+        <section class="page-content mid-accent fade-in">
+            <a href=`javascript:if(/http[s]?:\/\/www\.youtube\.com\//.test(document.URL))try{__setHighestQuality__(),alert('Keybind was already added! Press "Q" to use it!')}catch(e){if("TypeError"!=e.name&&"ReferenceError"!=e.name)throw e;function __setHighestQuality__(){for(var e of(document.querySelector("#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-right-controls > button.ytp-button.ytp-settings-button").click(),document.querySelectorAll("div.ytp-settings-menu > div.ytp-panel:not(.ytp-quality-menu) > div.ytp-panel-menu > div.ytp-menuitem")))if("Quality"==e.querySelector("div.ytp-menuitem-label").innerText){setTimeout(function(){e.click()},100);break}setTimeout(function(){for(var e of document.querySelectorAll("div.ytp-settings-menu > div.ytp-quality-menu > div.ytp-panel-menu > div"))if("1080p60 HD"==e.innerText||"1080p HD"==e.innerText)return void e.click();document.querySelector("div.ytp-settings-menu > div.ytp-quality-menu > div.ytp-panel-menu > div:first-child").click()},500)}window.addEventListener("keydown",function(e){81==e.keyCode&&__setHighestQuality__()}),alert('Keybind has been added! Press "Q" to use it!')}else alert("This page is not a YouTube video!");`>
+                <h1>Highest Quality Keybind (YouTube)</h1>
+            </a>
+            <p>This bookmarklet sets up a keybind to change the quality on a YouTube video to the highest possible quality (max of 1080p or 1080p60 because that's what most computers/internet connections can handle).</p>
+        </section>
+    </body>
+</html>
